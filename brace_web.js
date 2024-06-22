@@ -38,21 +38,21 @@ const BRACE_DL_DW = "https://github.com/bracetm/damnlarper/releases";
 
 function brace_redirect(linkid)
 {
-    if(linkid == BRACE_LINK__DISCORD)
-    {
-        window.open(BRACE_DC_LINK,'_blank');
-    }
-    if(linkid == BRACE_LINK__GITHUB)
-    {
-        window.open(BRACE_GITHUB_LINK,'_blank');
-    }
-    if(linkid == BRACE_LINK__PAWNSCRIPT)
-    {
-        window.open(BRACE_PS_DW,'_blank');
-    }
-    if(linkid == BRACE_LINK__DAMNLARPER)
-    {
-        window.open(BRACE_DL_DW,'_blank');
-    }
-    return 1;
+	if(linkid == BRACE_LINK__DISCORD)
+	{
+		window.open(BRACE_DC_LINK,'_blank');
+	}
+	if(linkid == BRACE_LINK__GITHUB)
+	{
+		window.open(BRACE_GITHUB_LINK,'_blank');
+	}
+	if(linkid == BRACE_LINK__PAWNSCRIPT)
+	{
+		window.open(BRACE_PS_DW,'_blank');
+	}
+	if(linkid == BRACE_LINK__DAMNLARPER)
+	{
+		window.open(BRACE_DL_DW,'_blank');
+	}
+	return 1;
 }
