@@ -33,7 +33,7 @@ header {
 	color: white;
 	padding: 10px 0;
 	display: flex;
-	position:fixed;
+	position: fixed;
 	justify-content: space-between;
 	align-items: center;
 }
@@ -47,7 +47,7 @@ nav ul {
 	list-style: none;
 	display: flex;
 	margin: 0;
-	padding: 0;
+	padding: 10px;
 }
 
 nav ul li {
@@ -153,9 +153,48 @@ homebutton:hover {
 homebutton:active {
 	transform: translateY(2px); /* Pomeranje dugmeta na dole za 1 piksel */
 	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1); /* Manja senka */
-	font-weight: ;
 }
 
 /*
 dropdown
 */
+/* Stil za dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Stil za sadržaj dropdowna (opcije) */
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #242424;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+	text-align: left;
+	padding: 10px;
+}
+
+/* Stil za opcije dropdowna */
+.dropdown-content a {
+	border: none;
+	outline: none;
+	cursor: pointer;
+	text-decoration: none;
+	font-weight: normal;
+	padding: 10px 15px;
+	font-size: 16px;
+	font-family: Verdana, sans-serif;
+	border-radius: 5px; /* Zaobljeni uglovi */
+	/*background-color: #8abb27; /* Boja pozadine */
+	color: #fff; /* Boja teksta */
+	transition: background-color 0.3s ease; /* Tranzicija za boju pozadine */
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Senka dugmeta */
+	z-index: 1;
+}
+
+/* Prikaz dropdowna kada je gumb aktiviran */
+.dropdown:hover .dropdown-content {
+	display: block;
+}
