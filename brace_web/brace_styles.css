@@ -1,0 +1,161 @@
+/*
+
+The ORIGINAL CODE is the `PawnScript: the Language` Source Code.
+The INITIAL DEVELOPER is Brace Inc., DEntisT.
+
+Version: MPL 1.1
+
+The contents of this file are subject to the Mozilla Public License Version 
+1.1 the "License"; you may not use this file except in compliance with 
+the License. You may obtain a copy of the License at 
+http://www.mozilla.org/MPL/
+
+Software distributed under the License is distributed on an "AS IS" basis,
+WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+for the specific language governing rights and limitations under the
+License.
+
+Portions created by the Initial Developer are Copyright (c) 2022
+the Initial Developer. All Rights Reserved.
+
+*/
+
+body {
+    font-family: Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #2e2e2e; /* very dark gray background */
+    color: white; /* default text color */
+}
+
+header {
+    background-color: #333; /* black color */
+    color: white;
+    padding: 10px 0;
+    display: flex;
+    position:fixed;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo img {
+    height: 50px;
+    margin-left: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section {
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3); /* white glow */
+    background-color: white;
+}
+
+#home {
+    background-color: #8abb27; /* green color */
+    background-image: url("brace_resources/brace_homebkg.png");
+    background-size: cover;
+    color: white;
+    text-align: right;
+}
+
+#about, #services, #PawnScript, #DamnLarper {
+    background-color: #333; /* dark gray background */
+    color: white; /* white text color */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3); /* white glow */
+}
+
+#PawnScript {
+    background-image: url("brace_resources/brace_psimage1.png");
+    background-position: right;
+}
+
+#DamnLarper {
+    background-image: url("brace_resources/brace_dlimage1.png");
+    background-position: right;
+    background-size: cover;
+}
+
+footer {
+    background-color: #333; /* black color */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    /*position: fixed; NEŠ BIT FIKSED*/
+    width: 100%;
+    bottom: 0;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3); /* white glow */
+}
+
+/*BUTTON*/
+
+/* Resetujemo stilizaciju za dugme */
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 16px;
+    /*font-weight: bold;*/
+    font-family: Verdana, sans-serif;
+    border-radius: 5px; /* Zaobljeni uglovi */
+    background-color: #8abb27; /* Boja pozadine */
+    color: #fff; /* Boja teksta */
+    transition: background-color 0.3s ease; /* Tranzicija za boju pozadine */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Senka dugmeta */
+}
+
+/* Promeniti boju pozadine na hover */
+button:hover {
+    background-color: #6c8b21;
+}
+button:active {
+    transform: translateY(2px); /* Pomeranje dugmeta na dole za 1 piksel */
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1); /* Manja senka */
+    font-weight: ;
+}
+
+homebutton {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 2px 3px;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: Verdana, sans-serif;
+    border-radius: 5px; /* Zaobljeni uglovi */
+    /*background-color: #8abb27; /* Boja pozadine */
+    color: #fff; /* Boja teksta */
+    transition: background-color 0.3s ease; /* Tranzicija za boju pozadine */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Senka dugmeta */
+}
+
+homebutton:hover {
+    background-color: #6c8b21;
+}
+homebutton:active {
+    transform: translateY(2px); /* Pomeranje dugmeta na dole za 1 piksel */
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1); /* Manja senka */
+    font-weight: ;
+}
+
+/*
+dropdown
+*/
