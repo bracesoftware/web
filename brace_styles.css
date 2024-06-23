@@ -262,6 +262,10 @@ other-button:hover {
 other-button:active {
 	background-color: #333;
 }
+
+.apply_border_radius{
+	border-radius: 8px;
+}
 /*
 dropdown
 */
