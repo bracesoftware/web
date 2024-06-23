@@ -313,3 +313,42 @@ dropdown
 	transition: translateY(5px);
 }
 
+/*********/
+
+/* Osnovni stil za loader wrapper */
+#loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #333; /* Tamnosiva pozadina */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Postavite visok z-index da se overlay prikaže iznad sadržaja */
+    opacity: 1; /* Vidljivo na početku */
+    transition: opacity 0.5s ease-in-out; /* Animacija za promjenu opacity-a */
+}
+
+/* Stil za loader */
+#loader {
+    border: 4px solid #333;
+    border-radius: 50%;
+    border-top: 4px solid #6c8b21;
+    width: 50px;
+    height: 50px;
+    animation: spin 0.5s linear infinite; /* Animacija rotacije */
+}
+
+/* Animacija za rotaciju loader-a */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Skrivanje loader-a nakon što se sadržaj učita */
+body.loaded #loader-wrapper {
+    opacity: 0;
+    pointer-events: none; /* Onemogućava klikanje dok je loader vidljiv */
+}

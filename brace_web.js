@@ -83,8 +83,6 @@ let BRACE_INTERVAL = null;
 
 function changeSlide(direction)
 {
-	BRACE_INTERVAL = null;
-	BRACE_INTERVAL = setInterval(nextSlide, 5000);
     showSlide(BRACE_CURRENT_SLIDE + direction);
 }
 
@@ -124,6 +122,11 @@ function Slide__init() {
 // Prikaz prvog slajda na početku
 
 document.addEventListener("DOMContentLoaded", function() {
+	setTimeout(function() {
+        document.body.classList.add("loaded");
+    }, 2000); // 2 sekunde
+
+
 	showSlide__init();
 	Slide__init();
 
