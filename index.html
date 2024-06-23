@@ -59,11 +59,12 @@ the Initial Developer. All Rights Reserved.
 	<section id="home">
 		<img  src="brace_slogan.png" alt="BRACE Slogan">
 	</section>
+	
 	<!-- ------------------- -->
 	<!-- ABOUTUS -->
 	<!-- ------------------- -->
 	<section id="about">
-		<img width="300" src="brace_resources/brace_aboutus.png" alt="BRACE Logo">
+		<img width="300" src="visual_resources/brace_aboutus.png" alt="BRACE Logo">
 		<p>BRACE Inc. is a small IT company dedicated to making information technology fun and interesting to newbies and future generations.</p>
 		<li>Interested in contribution, development or whatsoever? Click those buttons down there!</li>
 		<p>All of the official products of the Brace™ team are licensed with Mozilla Public License. We're fully open source!</p>
@@ -71,13 +72,23 @@ the Initial Developer. All Rights Reserved.
 		<button onclick="brace_redirect(BRACE_LINK__DISCORD)">BRACE Discord</button>
 		
 		<button onclick="brace_redirect(BRACE_LINK__GITHUB)">BRACE GitHub</button>
-	
+		<div class="slideshow-container">
+			<div class="slide">
+				<img src="visual_resources/brace_slide1.png">
+			</div>
+			<div class="slide">
+				<img src="visual_resources/brace_slide2.png">
+			</div>
+
+			<other-button class="prev" onclick="changeSlide(-1)">Prev</other-button>
+			<other-button class="next" onclick="changeSlide(1)">Next</other-button>
+		</div>
 	</section>
 	<!-- ------------------- -->
 	<!-- SERVICES -->
 	<!-- ------------------- -->
 	<section id="services">
-		<img width="300" src="brace_resources/brace_services.png" alt="BRACE Logo">
+		<img width="300" src="visual_resources/brace_services.png" alt="BRACE Logo">
 		<ul>
 			<li>Software Development</li>
 			<li>IT Consulting</li>
@@ -89,18 +100,19 @@ the Initial Developer. All Rights Reserved.
 	<!-- PawnScript -->
 	<!-- ------------------- -->
 	<section id="PawnScript">
-		<img width="30" src="brace_resources/pawnscript_logo.png" alt="PS Logo"> <img width="300" src="brace_resources/brace_pawnscript.png" alt="BRACE Logo">
+		<img width="30" src="visual_resources/pawnscript_logo.png" alt="PS Logo"> <img width="300" src="visual_resources/brace_pawnscript.png" alt="BRACE Logo">
 		<ul>
 			<li>PawnScript is a small interpreted semi-statically-typed object-oriented (and really memory-consuming) language written in Pawn and thus it is its extension (similar to C/C++ or Java/JavaScript). It is designed with the role of enabling modification of the gamemode code on the server during run-time.</li>
 			<li>It contains various features and things that aren't even introduced into Pawn itself. PawnScript has a very complex syntax which makes it very hard to learn but also fragile to small mistakes.</li>
 		</ul>
 		<button onclick="brace_redirect(BRACE_LINK__PAWNSCRIPT)">Download Now</button>
+		<button onclick="brace_redirect(BRACE_LINK__PAWNSCRIPTPAGE)">Learn more</button>
 	</section>
 	<!-- ------------------- -->
 	<!-- DamnLarper -->
 	<!-- ------------------- -->
 	<section id="DamnLarper">
-		<img width="100" src="brace_resources/damnlarper_logo.png" alt="DL Logo"> <img width="300" src="brace_resources/brace_damnlarper.png" alt="BRACE Logo">
+		<img width="100" src="visual_resources/damnlarper_logo.png" alt="DL Logo"> <img width="300" src="visual_resources/brace_damnlarper.png" alt="BRACE Logo">
 		<ul>
 			<li>Damn Larper is a multipurpose bot with many commands and features. It is basically a text-based game right in your server! This bot has a verification system, which is not allowing the unverified to send messages until they verify themselves. Besides verification, there are also moderation commands such as ban and kick commands.</li>
 			<li>In case you're searching for a fun bot, there are categories of commands for economy, custom text commands, miscellaneous commands, levelling system, bump system in development, list system with which you can make your own list and for example write down your chores on them.</li>
@@ -108,6 +120,18 @@ the Initial Developer. All Rights Reserved.
 			<li>You can also unlock achievements and get spectacular rewards once you complete them! Regarding to server security, there is a anti-raid and security system which is customizeable! There is also social media-like system where you can post messages and view them on a global feed. More features are waiting you once you add Damn Larper to your server!</li>
 		</ul>
 		<button onclick="brace_redirect(BRACE_LINK__DAMNLARPER)">Check Out</button>
+	</section>
+	<!-- ------------------- -->
+	<!-- TESTING -->
+	<!-- ------------------- -->
+	<section id="default_box" class="centerthetext">
+		<ul>
+			Have something to say?
+		</ul>
+		<input type="text" id="userInput" placeholder="Feedback:">
+        <button id="readButton">Submit</button>
+        <p id="output1"></p>
+        <sub id="output2"></sub>
 	</section>
 	<!-- ------------------- -->
 	<!-- FOOTER -->
