@@ -83,6 +83,8 @@ let BRACE_INTERVAL = null;
 
 function changeSlide(direction)
 {
+	BRACE_INTERVAL = null;
+	BRACE_INTERVAL = setInterval(nextSlide, 5000);
     showSlide(BRACE_CURRENT_SLIDE + direction);
 }
 
