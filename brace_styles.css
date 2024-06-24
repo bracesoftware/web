@@ -151,6 +151,14 @@ section {
 	text-align: right;
 }
 
+#home_damnlarper {
+	background-color: #8abb27; /* green color */
+	background-image: url("visual_resources/brace_homebkg_2.png");
+	background-size: cover;
+	color: white;
+	text-align: right;
+}
+
 #about, #services {
 	background-color: #fff;
 	color:black;

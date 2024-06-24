@@ -1,0 +1,77 @@
+<!--
+
+The ORIGINAL CODE is the `PawnScript: the Language` Source Code.
+The INITIAL DEVELOPER is Brace Inc., DEntisT.
+
+Version: MPL 1.1
+
+The contents of this file are subject to the Mozilla Public License Version 
+1.1 the "License"; you may not use this file except in compliance with 
+the License. You may obtain a copy of the License at 
+http://www.mozilla.org/MPL/
+
+Software distributed under the License is distributed on an "AS IS" basis,
+WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+for the specific language governing rights and limitations under the
+License.
+
+Portions created by the Initial Developer are Copyright (c) 2022
+the Initial Developer. All Rights Reserved.
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="icon" href="brace_logo.png" type="image/icon type">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>BRACE Inc.</title>
+
+	<link rel="stylesheet" href="brace_styles.css">
+	<script src="brace_web.js"></script>
+</head>
+<body>
+	<div id="loader-wrapper">
+        <div id="loader"></div>
+    </div>
+	<header>
+		<div class="logo">
+			<img class="apply_border_radius" src="brace_webpic.png" alt="BRACE Logo">
+		</div>
+		<nav>
+			<ul>
+				<button onclick="brace_redirect(BRACE_LINK__HOMEPAGE)">Go back</button>
+
+				<!--<homebutton><li><a href="#PawnScript">PawnScript</a></li></homebutton>
+				<homebutton><li><a href="#DamnLarper">Damn Larper</a></li></homebutton>-->
+			</ul>
+		</nav>
+	</header>
+
+	<section id="home_damnlarper">
+		<img class="apply_border_radius" height="400" src="visual_resources/damnlarper_logo.png" alt="BRACE Slogan">
+	</section>
+	
+	<!-- ------------------- -->
+	<!-- PawnScript -->
+	<!-- ------------------- -->
+	<section id="DamnLarper">
+		<img class="apply_border_radius" width="100" src="visual_resources/damnlarper_logo.png" alt="DL Logo"> <img class="apply_border_radius" width="300" src="visual_resources/brace_damnlarper.png" alt="BRACE Logo">
+		Made for <img height="16" class="apply_border_radius" src="visual_resources/discord_logo.png">
+		<ul>
+			<li>More info coming soon...</li>
+		</ul>
+		<button onclick="brace_redirect(BRACE_LINK__DAMNLARPER)">Check Out</button>
+		<button onclick="brace_redirect(BRACE_LINK__DLPAGE)">Learn more</button>
+	</section>
+	<!-- ------------------- -->
+	<!-- FOOTER -->
+	<!-- ------------------- -->
+	<footer>
+		<img class="apply_border_radius" width="50" src="brace_tinylogo.png" alt="BRACE Logo">
+		<h4>&copy; 2024 BRACE&#8482; Inc.</h4>
+		<p>All rights reserved.</p>
+	</footer>
+</body>
+</html>

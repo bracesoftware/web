@@ -30,6 +30,7 @@ const BRACE_LINK__DAMNLARPER = 3;
 
 const BRACE_LINK__HOMEPAGE = 4;
 const BRACE_LINK__PAWNSCRIPTPAGE = 5;
+const BRACE_LINK__DLPAGE = 6;
 
 
 //AboutUs
@@ -45,6 +46,7 @@ const BRACE_DL_DW = "https://github.com/bracetm/damnlarper/releases";
 //Files
 const BRACE_HOMEPAGE_HTML = "index.html"
 const BRACE_PAWNSCRIPT_HTML = "pawnscript.html"
+const BRACE_DAMNLARPER_HTML = "damnlarper.html"
 
 //funcs
 function brace_redirect(linkid)
@@ -73,6 +75,10 @@ function brace_redirect(linkid)
 	if(linkid == BRACE_LINK__PAWNSCRIPTPAGE)
 	{
 		window.location.href = BRACE_PAWNSCRIPT_HTML;
+	}
+	if(linkid == BRACE_LINK__DLPAGE)
+	{
+		window.location.href = BRACE_DAMNLARPER_HTML;
 	}
 }
 
