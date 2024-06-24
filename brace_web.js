@@ -124,7 +124,7 @@ function Slide__init() {
 document.addEventListener("DOMContentLoaded", function() {
 	setTimeout(function() {
         document.body.classList.add("loaded");
-    }, 2000); // 2 sekunde
+    }, 1000); // 1 sekunda
 
 
 	showSlide__init();
