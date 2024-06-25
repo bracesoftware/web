@@ -45,12 +45,12 @@ the Initial Developer. All Rights Reserved.
 		</div>
 		<nav>
 			<ul>
-				<homebutton><li><a href="#home">Home</a></li></homebutton>
-				<homebutton><li><a href="#about">About Us</a></li></homebutton>
-				<homebutton><li><a href="#services">Services</a></li></homebutton>
+				<homebutton id="headerbutton_home"><li><a href="#home">Home</a></li></homebutton>
+				<homebutton id="headerbutton_about"><li><a href="#about">About Us</a></li></homebutton>
+				<homebutton id="headerbutton_services"><li><a href="#services">Services</a></li></homebutton>
 
 				<div class="dropdown">
-					<homebutton>More...</homebutton>
+					<homebutton id="headerbutton_more">More...</homebutton>
 					<div class="dropdown-content">
 						<homebutton><a href="#PawnScript">PawnScript</a></homebutton>
 						<homebutton><a href="#DamnLarper">Damn Larper</a></homebutton>
@@ -64,14 +64,14 @@ the Initial Developer. All Rights Reserved.
 	</header>
 
 	<section id="home">
-		<img class="apply_border_radius" src="brace_slogan.png" alt="BRACE Slogan">
+		<img id="headerbutton_home_" class="apply_border_radius" src="brace_slogan.png" alt="BRACE Slogan">
 	</section>
 	
 	<!-- ------------------- -->
 	<!-- ABOUTUS -->
 	<!-- ------------------- -->
 	<section id="about">
-		<img class="apply_border_radius" width="300" src="visual_resources/brace_aboutus.png" alt="BRACE Logo">
+		<img id="headerbutton_about_" class="apply_border_radius" width="300" src="visual_resources/brace_aboutus.png" alt="BRACE Logo">
 		<p>BRACE Inc. is a small IT company dedicated to making information technology fun and interesting to newbies and future generations.</p>
 		<li>Interested in contribution, development or whatsoever? Click those buttons down there!</li>
 		<p>All of the official products of the Brace™ team are licensed with Mozilla Public License. We're fully open source!</p>
@@ -101,7 +101,7 @@ the Initial Developer. All Rights Reserved.
 	<!-- SERVICES -->
 	<!-- ------------------- -->
 	<section id="services">
-		<img class="apply_border_radius"  width="300" src="visual_resources/brace_services.png" alt="BRACE Logo">
+		<img id="headerbutton_services_" class="apply_border_radius"  width="300" src="visual_resources/brace_services.png" alt="BRACE Logo">
 		<ul>
 			<li>Software Development</li>
 			<li>IT Consulting</li>
@@ -113,7 +113,7 @@ the Initial Developer. All Rights Reserved.
 	<!-- PawnScript -->
 	<!-- ------------------- -->
 	<section id="PawnScript">
-		<img class="apply_border_radius" width="30" src="visual_resources/pawnscript_logo.png" alt="PS Logo"> <img class="apply_border_radius" width="300" src="visual_resources/brace_pawnscript.png" alt="BRACE Logo">
+		<img id="headerbutton_more_" class="apply_border_radius" width="30" src="visual_resources/pawnscript_logo.png" alt="PS Logo"> <img class="apply_border_radius" width="300" src="visual_resources/brace_pawnscript.png" alt="BRACE Logo">
 		<ul>
 			<li>PawnScript is a small interpreted semi-statically-typed object-oriented (and really memory-consuming) language written in Pawn and thus it is its extension (similar to C/C++ or Java/JavaScript). It is designed with the role of enabling modification of the gamemode code on the server during run-time.</li>
 			<li>It contains various features and things that aren't even introduced into Pawn itself. PawnScript has a very complex syntax which makes it very hard to learn but also fragile to small mistakes.</li>
