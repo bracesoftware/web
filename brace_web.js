@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {});
 /*
 
-The ORIGINAL CODE is the `PawnScript: the Language` Source Code.
+The ORIGINAL CODE is the `BRACE WEBSITE` Source Code.
 The INITIAL DEVELOPER is Brace Inc., DEntisT.
 
 Version: MPL 1.1
