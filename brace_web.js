@@ -1,4 +1,6 @@
-document.addEventListener('DOMContentLoaded', function() {});
+document.addEventListener('DOMContentLoaded', function() {
+	console.log("Website loaded");
+});
 /*
 
 The ORIGINAL CODE is the `BRACE WEBSITE` Source Code.
@@ -21,6 +23,11 @@ the Initial Developer. All Rights Reserved.
 
 */
 
+const PAGE_BRACE_HOMEPAGE = 0;
+const PAGE_PAWNSCRIPT_PAGE = 1;
+const PAGE_DAMNLARPER_PAGE = 2;
+
+let current_page = -1;
 
 //LINKIDS
 const BRACE_LINK__DISCORD = 0;
@@ -89,7 +96,7 @@ let BRACE_INTERVAL = null;
 
 function changeSlide(direction)
 {
-    showSlide(BRACE_CURRENT_SLIDE + direction);
+	showSlide(BRACE_CURRENT_SLIDE + direction);
 }
 
 function nextSlide()
@@ -100,21 +107,22 @@ function nextSlide()
 function showSlide(index)
 {
 	let slides = document.querySelectorAll('.slide');
-    // Provjera da li je index u granicama broja slajdova
-    if (index < 0) {
-        index = slides.length - 1; // Povratak na zadnji slajd ako je index manji od 0
-    } else if (index >= slides.length) {
-        index = 0; // Povratak na prvi slajd ako je index veći ili jednak broju slajdova
-    }
+	// Provjera da li je index u granicama broja slajdova
+	if (index < 0) {
+		index = slides.length - 1; // Povratak na zadnji slajd ako je index manji od 0
+	} else if (index >= slides.length) {
+		index = 0; // Povratak na prvi slajd ako je index veći ili jednak broju slajdova
+	}
 
-    // Skrivanje prethodnog slajda
-    slides[BRACE_CURRENT_SLIDE].style.display = 'none';
+	// Skrivanje prethodnog slajda
+	slides[BRACE_CURRENT_SLIDE].style.display = 'none';
 
-    // Prikaz novog slajda
-    slides[index].style.display = 'block';
+	// Prikaz novog slajda
+	slides[index].style.display = 'block';
 
-    // Postavljanje trenutnog slajda na novi index
-    BRACE_CURRENT_SLIDE = index;
+	// Postavljanje trenutnog slajda na novi index
+	BRACE_CURRENT_SLIDE = index;
+	console.log("BRACE_CURRENT_SLIDE je: " + BRACE_CURRENT_SLIDE);
 }
 
 function showSlide__init() {
@@ -129,31 +137,31 @@ function Slide__init() {
 
 document.addEventListener("DOMContentLoaded", function() {
 	setTimeout(function() {
-        document.body.classList.add("loaded");
-    }, 1000); // 1 sekunda
+		document.body.classList.add("loaded");
+	}, 1000); // 1 sekunda
 
+	if(current_page == PAGE_BRACE_HOMEPAGE)
+	{
+		showSlide__init();
+		Slide__init();
 
-	showSlide__init();
-	Slide__init();
+		const readButton = document.getElementById("readButton");
+		const userInput = document.getElementById("userInput");
+		const output1 = document.getElementById("output1");
+		const output2 = document.getElementById("output2");
 
-    const readButton = document.getElementById("readButton");
-    const userInput = document.getElementById("userInput");
-    const output1 = document.getElementById("output1");
-    const output2 = document.getElementById("output2");
-
-    readButton.addEventListener("click", function() {
-        const inputValue = userInput.value;
-        if(inputValue === "")
-        {
-        	output1.textContent = "Input can't be empty.";
-        	output2.textContent = "";
-        }
-		else 
-		{
-			output1.textContent = "Thank you for your feedback!"; 
-			output2.textContent = "You entered: " + inputValue;
-		}
-    });
+		readButton.addEventListener("click", function() {
+			const inputValue = userInput.value;
+			if(inputValue === "")
+			{
+				output1.textContent = "Input can't be empty.";
+				output2.textContent = "";
+			}
+			else 
+			{
+				output1.textContent = "Thank you for your feedback!"; 
+				output2.textContent = "You entered: " + inputValue;
+			}
+		});
+	}
 });
-
-console.log("BRACE_CURRENT_SLIDE je: " + BRACE_CURRENT_SLIDE);
