@@ -106,6 +106,7 @@ header {
 	padding: 10px 0;
 	display: flex;
 	position: fixed;
+	border-radius: 5px;
 	top: 0;
 	justify-content: space-between;
 	align-items: center;
