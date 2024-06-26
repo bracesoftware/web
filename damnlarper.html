@@ -38,15 +38,15 @@ the Initial Developer. All Rights Reserved.
 </head>
 <body>
 	<div id="loader-wrapper">
-        <div id="loader"></div>
-    </div>
+		<div id="loader"></div>
+	</div>
 	<header>
 		<div class="logo">
 			<img class="apply_border_radius" src="brace_webpic.png" alt="BRACE Logo">
 		</div>
 		<nav>
 			<ul>
-				<button onclick="brace_redirect(BRACE_LINK__HOMEPAGE)">Go back</button>
+				<button class="normalbutton" onclick="brace_redirect(BRACE_LINK__HOMEPAGE)">Go back</button>
 
 				<!--<homebutton><li><a href="#PawnScript">PawnScript</a></li></homebutton>
 				<homebutton><li><a href="#DamnLarper">Damn Larper</a></li></homebutton>-->
@@ -76,15 +76,24 @@ the Initial Developer. All Rights Reserved.
 		</ul>
 		<hr>
 		What are you waiting for?
-		<button onclick="brace_redirect(BRACE_LINK__DAMNLARPER)">Check Out</button>
+		<button class="normalbutton" onclick="brace_redirect(BRACE_LINK__DAMNLARPER)">Check Out</button>
 	</section>
 	<!-- ------------------- -->
 	<!-- FOOTER -->
 	<!-- ------------------- -->
 	<footer>
 		<img class="apply_border_radius" width="50" src="brace_tinylogo.png" alt="BRACE Logo">
-		<h4>&copy; 2024 Brace&#8482; Co.</h4>
-		<p>All rights reserved.</p>
+		<p><b>&copy; 2024 Brace&#8482; Co.</b> All rights reserved.</p>
+		<sub>Follow us on social media:</sub><hr>
+		<icon_button onclick="brace_redirect(BRACE_LINK__IG)">
+			<img class="apply_border_radius" src="visual_resources/instagram_logo.png">
+		</icon_button>
+		<icon_button onclick="brace_redirect(BRACE_LINK__YT)">
+			<img class="apply_border_radius" src="visual_resources/youtube_logo.png">
+		</icon_button>
+		<icon_button onclick="brace_redirect(BRACE_LINK__TT)">
+			<img class="apply_border_radius" src="visual_resources/tiktok_logo.png">
+		</icon_button>
 	</footer>
 </body>
 </html>

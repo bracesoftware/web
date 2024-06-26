@@ -25,75 +25,96 @@ the Initial Developer. All Rights Reserved.
 	--bright_green_color: #8abb27;
 }
 
+
+
+icon_button {
+	cursor: pointer;
+	text-decoration: none;
+	padding: 5px 10px;
+}
+
+icon_button img {
+	height: 20px;
+	transition: transform 0.3s;
+}
+
+icon_button img:hover {
+	transform: scale(1.2);
+}
+
+icon_button img:active{
+	transform: translateY(2px);
+}
+
 #userInput {
-    padding: 10px;
-    margin: 10px 0;
-    width: 200px;
+	padding: 10px;
+	margin: 10px 0;
+	width: 200px;
 }
 
 #output {
-    margin-top: 10px;
-    font-size: 13px;
-    font-family: Verdana, sans-serif;
-    font-weight: normal;
+	margin-top: 10px;
+	font-size: 13px;
+	font-family: Verdana, sans-serif;
+	font-weight: normal;
 }
 
 /*slide*/
 /* styles.css */
 .slideshow-container {
-    position: relative;
-    max-width: 800px;
-    margin: auto;
+	position: relative;
+	max-width: 800px;
+	margin: auto;
 }
 
 .slide {
-    display: none;
-    animation-name: __slidefade;
-    animation-duration: 1.5s;
+	display: none;
+	animation-name: __slidefade;
+	animation-duration: 1.5s;
 }
 
 .slide img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
+	width: 100%;
+	height: auto;
+	border-radius: 10px;
 }
 
 .prev, .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 20px;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    cursor: pointer;
-    padding: 10px 15px;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 20px;
+	background-color: rgba(0, 0, 0, 0.5);
+	color: white;
+	border: none;
+	cursor: pointer;
+	padding: 10px 15px;
 }
 
 .prev {
-    left: 10px;
+	left: 10px;
 }
 
 .next {
-    right: 10px;
+	right: 10px;
 }
 
 @keyframes __slidefade {
-    from {
-    	opacity: 0.5
-    }
-    to {
-    	opacity: 1
-    }
+	from {
+		opacity: 0.5
+	}
+	to {
+		opacity: 1
+	}
 }
 
 
 /************/
 iframe {
-    border: none;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    opacity: 0.8;
+	border: none;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	border-radius: 8px;
+	opacity: 0.8;
 }
 
 
@@ -138,7 +159,7 @@ nav ul li {
 nav ul li a {
 	color: white;
 	text-decoration: none;
-	font-weight: bold;
+	font-weight: normal;
 }
 
 section {
@@ -207,7 +228,7 @@ footer {
 /*BUTTON*/
 
 /* Resetujemo stilizaciju za dugme */
-button {
+.normalbutton {
 	border: none;
 	outline: none;
 	cursor: pointer;
@@ -223,33 +244,34 @@ button {
 }
 
 /* Promeniti boju pozadine na hover */
-button:hover {
+.normalbutton:hover {
 	background-color: var(--green_color);
 }
-button:active {
+.normalbutton:active {
 	transform: translateY(2px); /* Pomeranje dugmeta na dole za 1 piksel */
 	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1); /* Manja senka */
-	font-weight: ;
 }
 /****************/
-homebutton {
-	border: none;
+.homebutton {
+	border: 1px solid;
+	border-color: var(--green_color);
 	outline: none;
 	cursor: pointer;
-	padding: 2px 3px;
+	margin: 2px;
 	font-size: 16px;
-	font-weight: bold;
+	font-weight: normal;
 	font-family: Verdana, sans-serif;
 	border-radius: 5px; /* Zaobljeni uglovi */
+	background-color: #333; /* Boja pozadine */
 	color: #fff; /* Boja teksta */
 	transition: background-color 0.3s ease; /* Tranzicija za boju pozadine */
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Senka dugmeta */
 }
 
-homebutton:hover {
+.homebutton:hover {
 	background-color: var(--green_color);
 }
-homebutton:active {
+.homebutton:active {
 	transform: translateY(2px); /* Pomeranje dugmeta na dole za 1 piksel */
 	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1); /* Manja senka */
 }
@@ -278,90 +300,46 @@ other-button:active {
 .apply_border_radius{
 	border-radius: 8px;
 }
-/*
-dropdown
-*/
-/* Stil za dropdown */
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
 
-/* Stil za sadržaj dropdowna (opcije) */
-.dropdown-content {
-	display: none;
-	position: absolute;
-	background-color: #242424;
-	min-width: 160px;
-	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-	z-index: 1;
-}
-
-/* Stil za opcije dropdowna */
-.dropdown-content a {
-	border: none;
-	outline: none;
-	cursor: pointer;
-	text-decoration: none;
-	font-weight: normal;
-	padding: 10px 15px;
-	font-size: 16px;
-	font-family: Verdana, sans-serif;
-	border-radius: 5px; /* Zaobljeni uglovi */
-	color: #fff; /* Boja teksta */
-	transition: background-color 0.3s ease; /* Tranzicija za boju pozadine */
-	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Senka dugmeta */
-	z-index: 1;
-}
-
-/* Prikaz dropdowna kada je gumb aktiviran */
-.dropdown:hover .dropdown-content {
-	display: block;
-}
-
-/* Prikaz dropdowna kada je gumb aktiviran */
-.dropdown:active .dropdown-content {
-	transition: translateY(5px);
-}
 
 /*********/
 
 /* Osnovni stil za loader wrapper */
 #loader-wrapper {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #333; /* Tamnosiva pozadina */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000; /* Postavite visok z-index da se overlay prikaže iznad sadržaja */
-    opacity: 1; /* Vidljivo na početku */
-    transition: opacity 0.5s ease-in-out; /* Animacija za promjenu opacity-a */
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #333; /* Tamnosiva pozadina */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1000; /* Postavite visok z-index da se overlay prikaže iznad sadržaja */
+	opacity: 1; /* Vidljivo na početku */
+	transition: opacity 0.5s ease-in-out; /* Animacija za promjenu opacity-a */
 }
 
 /* Stil za loader */
 #loader {
-    border: 4px solid #333;
-    border-radius: 50%;
-    border-top: 4px solid var(--green_color);
-    width: 50px;
-    height: 50px;
-    animation: spin 0.5s linear infinite; /* Animacija rotacije */
+	border: 4px solid #333;
+	border-radius: 50%;
+	border-top: 4px solid var(--green_color);
+	width: 50px;
+	height: 50px;
+	animation: spin 0.5s linear infinite; /* Animacija rotacije */
 }
 
 /* Animacija za rotaciju loader-a */
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
 }
 
 /* Skrivanje loader-a nakon što se sadržaj učita */
 body.loaded #loader-wrapper {
-    opacity: 0;
-    pointer-events: none; /* Onemogućava klikanje dok je loader vidljiv */
+	opacity: 0;
+	pointer-events: none; /* Onemogućava klikanje dok je loader vidljiv */
 }
 
 /*****/
@@ -373,4 +351,113 @@ code {
 	border-radius: 10px;
 	padding: 3px 3px;
 	color: var(--green_color);
+}
+
+/**
+ * *
+ * *
+ * *
+ * *
+ * *
+ * *
+ * */
+
+
+ .navbar {
+	background-color: #333;
+	padding: 10px;
+}
+
+ .menu {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+ .menu-item {
+	position: relative;
+	display: inline-block;
+}
+
+
+ .menu-button {
+	border: none;
+	outline: none;
+	cursor: pointer;
+	font-size: 16px;
+	padding: 10px 16px;
+	/*font-weight: bold;*/
+	font-family: Verdana, sans-serif;
+	border-radius: 5px; /* Zaobljeni uglovi */
+	background-color: #333; /* Boja pozadine */
+	color: #fff; /* Boja teksta */
+	transition: background-color 0.3s ease; /* Tranzicija za boju pozadine */
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Senka dugmeta */
+}
+
+ .menu-button:hover {
+	background-color: var(--green_color);
+}
+ .menu-button:active {
+	transform: translateY(2px); /* Pomeranje dugmeta na dole za 1 piksel */
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1); /* Manja senka */
+}
+
+
+ .dropdown {
+	position: absolute;
+	background-color: #242424;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+	opacity: 0;
+	border-radius: 5px;
+	transform: translateY(-10px);
+	transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s 0.3s;
+	visibility: hidden;
+}
+
+ .dropdown li a {
+	color: white;
+	padding: 10px 15px;
+	text-decoration: none;
+	display: block;
+}
+
+ .dropdown li a:hover {
+	background-color: #575757;
+}
+
+ .dropdown.show {
+	opacity: 1;
+	transform: translateY(0);
+	visibility: visible;
+	transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s;
+}
+
+
+.optionbutton {
+	border: 1px solid;
+	outline: none;
+	cursor: pointer;
+	font-size: 16px;
+	display: block;
+	border-color: var(--green_color);
+	padding: 10px 16px;
+	margin: 2px;
+	font-weight: normal;
+	font-family: Verdana, sans-serif;
+	border-radius: 5px; /* Zaobljeni uglovi */
+	background-color: #242424; /* Boja pozadine */
+	color: #fff; /* Boja teksta */
+	transition: background-color 0.3s ease; /* Tranzicija za boju pozadine */
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Senka dugmeta */
+}
+
+.optionbutton:hover {
+	background-color: var(--green_color);
+}
+.optionbutton:active {
+	transform: translateY(2px); /* Pomeranje dugmeta na dole za 1 piksel */
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1); /* Manja senka */
 }

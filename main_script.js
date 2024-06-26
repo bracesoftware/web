@@ -35,10 +35,12 @@ const BRACE_LINK__DISCORD = 0;
 const BRACE_LINK__GITHUB = 1;
 const BRACE_LINK__PAWNSCRIPT = 2;
 const BRACE_LINK__DAMNLARPER = 3;
-
 const BRACE_LINK__HOMEPAGE = 4;
 const BRACE_LINK__PAWNSCRIPTPAGE = 5;
 const BRACE_LINK__DLPAGE = 6;
+const BRACE_LINK__IG = 7;
+const BRACE_LINK__YT = 8;
+const BRACE_LINK__TT = 9;
 
 
 //AboutUs
@@ -55,6 +57,11 @@ const BRACE_DL_DW = "https://github.com/bracetm/damnlarper/releases";
 const BRACE_HOMEPAGE_HTML = "index.html"
 const BRACE_PAWNSCRIPT_HTML = "pawnscript.html"
 const BRACE_DAMNLARPER_HTML = "damnlarper.html"
+
+// Social media
+const BRACE_INSTAGRAM_LINK = "https://www.instagram.com/bracetm";
+const BRACE_YOUTUBE_LINK = "https://www.youtube.com/channel/UCwiJJ1XYY2uOgYNVYur0Eqw";
+const BRACE_TIKTOK_LINK = "https://www.tiktok.com/@bracetm";
 
 //funcs
 function brace_redirect(linkid)
@@ -74,6 +81,18 @@ function brace_redirect(linkid)
 	if(linkid == BRACE_LINK__DAMNLARPER)
 	{
 		window.open(BRACE_DL_DW,'_blank');
+	}
+	if(linkid == BRACE_LINK__IG)
+	{
+		window.open(BRACE_INSTAGRAM_LINK,'_blank');
+	}
+	if(linkid == BRACE_LINK__YT)
+	{
+		window.open(BRACE_YOUTUBE_LINK,'_blank');
+	}
+	if(linkid == BRACE_LINK__TT)
+	{
+		window.open(BRACE_TIKTOK_LINK,'_blank');
 	}
 
 	if(linkid == BRACE_LINK__HOMEPAGE)
@@ -184,12 +203,11 @@ document.addEventListener("DOMContentLoaded", function() {
 			const headerbutton_home___ = document.getElementById("headerbutton_home_");
 			const headerbutton_about___ = document.getElementById("headerbutton_about_");
 			const headerbutton_services___ = document.getElementById("headerbutton_services_");
-			const headerbutton_more___ = document.getElementById("headerbutton_more_");
 
 			const headerbutton_home_pos = user_utils.getElementYPos(headerbutton_home___);
 			const headerbutton_about_pos = user_utils.getElementYPos(headerbutton_about___);
 			const headerbutton_services_pos = user_utils.getElementYPos(headerbutton_services___);
-			const headerbutton_more_pos = user_utils.getElementYPos(headerbutton_more___);
+			const headerbutton_more_pos = user_utils.getElementYPos(document.getElementById("headerbutton_more_"));
 
 			console.log("headerbutton_home_pos: " + headerbutton_home_pos);
 
@@ -203,7 +221,13 @@ document.addEventListener("DOMContentLoaded", function() {
 				let scroll_pos_y = window.scrollY;
 
 				//console.log("scroll_pos_y: " + scroll_pos_y);
-
+				if(scroll_pos_y <= document.documentElement.scrollHeight)
+				{
+					headerbutton_home__.style.textDecoration = "none";
+					headerbutton_about__.style.textDecoration = "none";
+					headerbutton_services__.style.textDecoration = "none";
+					headerbutton_more__.style.textDecoration = "underline";
+				}
 				if(scroll_pos_y <= headerbutton_more_pos-user_utils.getReductIndex())
 				{
 					headerbutton_home__.style.textDecoration = "none";
