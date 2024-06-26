@@ -24,7 +24,7 @@ const OS_WINDOWS = 1;
 const OS_MAC = 2;
 const OS_LINUX = 3;
 
-let brace_utils = {
+let user_utils = {
 	consoleOutput: function(text)
 	{
 		console.log("[Brace-Util] WEBSITE CONSOLE - Info: " + text);
@@ -57,22 +57,22 @@ let brace_utils = {
 	{
 		if(window.navigator.platform.indexOf("Win") != -1)
 		{
-			brace_utils.consoleOutput("Client is running Windows.");
+			user_utils.consoleOutput("Client is running Windows.");
 			return OS_WINDOWS;
 		}
 		if(window.navigator.platform.indexOf("Mac") != -1)
 		{
-			brace_utils.consoleOutput("Client is running MacOS.");
+			user_utils.consoleOutput("Client is running MacOS.");
 			return OS_MAC;
 		}
 		if(window.navigator.platform.indexOf("Linux") != -1)
 		{
-			brace_utils.consoleOutput("Client is running Linux.");
+			user_utils.consoleOutput("Client is running Linux.");
 			return OS_LINUX;
 		}
-		brace_utils.consoleOutput("Client's OS is unknown.");
+		user_utils.consoleOutput("Client's OS is unknown.");
 		return 0;
 	}
 }
 
-brace_utils.consoleOutput("Module loaded.");
+user_utils.consoleOutput("Module loaded.");
