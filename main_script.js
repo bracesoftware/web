@@ -45,13 +45,13 @@ const BRACE_LINK__TT = 9;
 
 //AboutUs
 const BRACE_DC_LINK = "https://discord.gg/wjxKdRDuUU";
-const BRACE_GITHUB_LINK = "https://github.com/bracetm";
+const BRACE_GITHUB_LINK = "https://github.com/bracesoftware";
 
 //PawnScript
-const BRACE_PS_DW = "https://github.com/bracetm/pawnscript/releases";
+const BRACE_PS_DW = "https://github.com/bracesoftware/pawnscript/releases";
 
 //Damn Larper
-const BRACE_DL_DW = "https://github.com/bracetm/damnlarper/releases";
+const BRACE_DL_DW = "https://github.com/bracesoftware/damnlarper/releases";
 
 //Files
 const BRACE_HOMEPAGE_HTML = "index.html"
@@ -59,9 +59,9 @@ const BRACE_PAWNSCRIPT_HTML = "pawnscript.html"
 const BRACE_DAMNLARPER_HTML = "damnlarper.html"
 
 // Social media
-const BRACE_INSTAGRAM_LINK = "https://www.instagram.com/bracetm";
-const BRACE_YOUTUBE_LINK = "https://www.youtube.com/channel/UCwiJJ1XYY2uOgYNVYur0Eqw";
-const BRACE_TIKTOK_LINK = "https://www.tiktok.com/@bracetm";
+const BRACE_INSTAGRAM_LINK = "https://www.instagram.com/bracesoftware";
+const BRACE_YOUTUBE_LINK = "https://www.youtube.com/@bracesoftware";
+const BRACE_TIKTOK_LINK = "https://www.tiktok.com/@bracesoftware";
 
 //funcs
 function brace_redirect(linkid)
