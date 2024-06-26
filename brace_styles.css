@@ -20,6 +20,11 @@ the Initial Developer. All Rights Reserved.
 
 */
 
+:root{
+	--green_color: #6c8b21;
+	--bright_green_color: #8abb27;
+}
+
 #userInput {
     padding: 10px;
     margin: 10px 0;
@@ -145,7 +150,7 @@ section {
 }
 
 #home {
-	background-color: #8abb27; /* green color */
+	background-color: var(--green_color); /* green color */
 	background-image: url("visual_resources/brace_homebkg.png");
 	background-size: cover;
 	color: white;
@@ -153,7 +158,7 @@ section {
 }
 
 #home_damnlarper {
-	background-color: #8abb27; /* green color */
+	background-color: var(--green_color); /* green color */
 	background-image: url("visual_resources/brace_homebkg_2.png");
 	background-size: cover;
 	color: white;
@@ -211,7 +216,7 @@ button {
 	/*font-weight: bold;*/
 	font-family: Verdana, sans-serif;
 	border-radius: 5px; /* Zaobljeni uglovi */
-	background-color: #8abb27; /* Boja pozadine */
+	background-color: var(--bright_green_color); /* Boja pozadine */
 	color: #fff; /* Boja teksta */
 	transition: background-color 0.3s ease; /* Tranzicija za boju pozadine */
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Senka dugmeta */
@@ -219,7 +224,7 @@ button {
 
 /* Promeniti boju pozadine na hover */
 button:hover {
-	background-color: #6c8b21;
+	background-color: var(--green_color);
 }
 button:active {
 	transform: translateY(2px); /* Pomeranje dugmeta na dole za 1 piksel */
@@ -236,14 +241,13 @@ homebutton {
 	font-weight: bold;
 	font-family: Verdana, sans-serif;
 	border-radius: 5px; /* Zaobljeni uglovi */
-	/*background-color: #8abb27; /* Boja pozadine */
 	color: #fff; /* Boja teksta */
 	transition: background-color 0.3s ease; /* Tranzicija za boju pozadine */
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Senka dugmeta */
 }
 
 homebutton:hover {
-	background-color: #6c8b21;
+	background-color: var(--green_color);
 }
 homebutton:active {
 	transform: translateY(2px); /* Pomeranje dugmeta na dole za 1 piksel */
@@ -259,14 +263,13 @@ other-button {
 	font-weight: normal;
 	font-family: Verdana, sans-serif;
 	border-radius: 5px; /* Zaobljeni uglovi */
-	/*background-color: #8abb27; /* Boja pozadine */
 	color: #fff; /* Boja teksta */
 	transition: background-color 0.3s ease; /* Tranzicija za boju pozadine */
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Senka dugmeta */
 }
 
 other-button:hover {
-	background-color: #6c8b21;
+	background-color: var(--green_color);
 }
 other-button:active {
 	background-color: #333;
@@ -305,7 +308,6 @@ dropdown
 	font-size: 16px;
 	font-family: Verdana, sans-serif;
 	border-radius: 5px; /* Zaobljeni uglovi */
-	/*background-color: #8abb27; /* Boja pozadine */
 	color: #fff; /* Boja teksta */
 	transition: background-color 0.3s ease; /* Tranzicija za boju pozadine */
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Senka dugmeta */
@@ -344,7 +346,7 @@ dropdown
 #loader {
     border: 4px solid #333;
     border-radius: 50%;
-    border-top: 4px solid #6c8b21;
+    border-top: 4px solid var(--green_color);
     width: 50px;
     height: 50px;
     animation: spin 0.5s linear infinite; /* Animacija rotacije */
@@ -370,5 +372,5 @@ code {
 	font-family: Consolas;
 	border-radius: 10px;
 	padding: 3px 3px;
-	color: #6c8b21;
+	color: var(--green_color);
 }
