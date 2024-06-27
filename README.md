@@ -1,2 +1,2 @@
 # BRACE Website
-Click [here](https://bracetm.github.io/web/index.html).
+Click [here](https://bracesoftware.github.io/web/index.html).
