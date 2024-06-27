@@ -165,7 +165,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	if(current_page == PAGE_BRACE_HOMEPAGE)
 	{
-		if(user_utils.getClientOS() == OS_LINUX)
+		if(user_utils.getClientOS() != OS_WINDOWS)
 		{
 			const index_slogan = document.getElementById("headerbutton_home_");
 			index_slogan.style.textAlign = 'left';

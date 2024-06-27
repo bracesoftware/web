@@ -71,9 +71,25 @@ the Initial Developer. All Rights Reserved.
 			<li>You can also unlock achievements and get spectacular rewards once you complete them! Regarding to server security, there is a anti-raid and security system which is customizeable! There is also social media-like system where you can post messages and view them on a global feed. More features are waiting you once you add Damn Larper to your server!</li>
 		</ul>
 		<h1>Latest News</h1>
-		<ul>
-			<li>Use the promo code <code>braceweb</code> to get a 50% discount in the Damn Larper Marketplace.</li>
-		</ul>
+		<div class="news-container">
+			<!--BOX-->
+			<div class="news-box">
+				<img src="visual_resources/damnlarper_logo.png" class="news-image">
+				<h2>Thanks for visiting us!</h2>
+				<p>Use the promo code <code>braceweb</code> to get a 50% discount in the Damn Larper Marketplace.</p>
+				<!--JEDAN MODAL-->
+				<button class="homebutton" onclick="openModal('myModal')">Learn more...</button>
+			</div>
+		</div>
+		<div id="myModal" class="modal">
+			<div class="modal-content">
+				<img class="apply_border_radius" src="visual_resources/damnlarper_logo.png">
+				<span class="close" onclick="closeModal()">&times;</span>
+				<h2>Thanks for visiting us!</h2>
+				<p>Use the promo code <code>braceweb</code> to get a 50% discount in the Damn Larper Marketplace.</p>
+				<p>You can use the promo code with <code>/damn activatepromo</code> command.</p>
+			</div>
+		</div>
 		<hr>
 		What are you waiting for?
 		<button class="normalbutton" onclick="brace_redirect(BRACE_LINK__DAMNLARPER)">Check Out</button>
@@ -95,5 +111,6 @@ the Initial Developer. All Rights Reserved.
 			<img class="apply_border_radius" src="visual_resources/tiktok_logo.png">
 		</icon_button>
 	</footer>
+	<script src="popup_impl.js"></script>
 </body>
 </html>

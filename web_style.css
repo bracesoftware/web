@@ -461,3 +461,137 @@ code {
 	transform: translateY(2px); /* Pomeranje dugmeta na dole za 1 piksel */
 	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1); /* Manja senka */
 }
+/*
+***
+*****
+*
+*
+*
+*
+*
+*/
+
+
+.news-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 20px;
+}
+
+.news-box {
+	background-color: #333;
+	border: 1px solid var(--green_color);
+	border-radius: 10px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	margin: 10px;
+	padding: 20px;
+	width: 300px;
+	opacity: 0.8;
+}
+
+.news-image {
+	width: 100%;
+	height: auto;
+	border-radius: 10px 10px 0 0; /* Zaobljeni gornji rubovi slike */
+	margin-bottom: 15px; /* Razmak između slike i naslova */
+}
+
+.news-box h2 {
+	margin: 0;
+	font-size: 1.5em;
+	color: #fff;
+}
+
+.news-box p {
+	color: #fff;
+	line-height: 1.6;
+}
+
+/*
+*
+*
+*
+*
+**/
+/* Stil za dugme */
+button {
+	padding: 10px 20px;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+/* Stil za modal (pop-up) */
+.modal {
+	display: none; /* Skriven po defaultu */
+	position: fixed; 
+	z-index: 1; 
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto; 
+	background-color: rgb(0,0,0); 
+	background-color: rgba(0,0,0,0.4); 
+	animation: fadeIn 0.5s; /* Animacija za fade-in */
+}
+
+/* Stil za modalni sadržaj */
+.modal-content {
+	background-color: #333;
+	margin: 15% auto;
+	opacity: 1;
+	color: #fff;
+	padding: 20px;
+	border-radius: 5px;
+	border: 1px solid var(--green_color);
+	width: 50%; /* Manja širina */
+	max-width: 300px; /* Maksimalna širina */
+	animation: slideDown 0.5s; /* Animacija za slide-down */
+}
+
+.modal-content img {
+	width: 300px;
+}
+
+/* Stil za dugme za zatvaranje (x) */
+.close {
+	color: #aaa;
+	float: right;
+	font-size: 16px;
+	font-weight: bold;
+	padding: 3px 5px;
+}
+
+.close:hover,
+.close:focus {
+	color: var(--green_color);
+	text-decoration: none;
+	cursor: pointer;
+}
+
+/* Animacije */
+/* Animacije */
+@keyframes fadeIn {
+	from {opacity: 0;}
+	to {opacity: 1;}
+}
+
+@keyframes slideDown {
+	from {transform: translateY(-50px); opacity: 0;}
+	to {transform: translateY(0); opacity: 1;}
+}
+
+@keyframes fadeOut {
+	from {opacity: 1;}
+	to {opacity: 0;}
+}
+/* Dodaj fade-in i fade-out klase */
+.fade-in {
+	animation: fadeIn 0.5s;
+}
+
+.fade-out {
+	animation: fadeOut 0.5s;
+}
+
