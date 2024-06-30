@@ -210,63 +210,64 @@ document.addEventListener("DOMContentLoaded", function() {
 			}
 		});
 
+		if(user_utils.isMobile() == false)
+		{
+			const headerbutton_home__ = document.getElementById("headerbutton_home");
+			const headerbutton_about__ = document.getElementById("headerbutton_about");
+			const headerbutton_services__ = document.getElementById("headerbutton_services");
+			const headerbutton_more__ = document.getElementById("headerbutton_more");
 
-		const headerbutton_home__ = document.getElementById("headerbutton_home");
-		const headerbutton_about__ = document.getElementById("headerbutton_about");
-		const headerbutton_services__ = document.getElementById("headerbutton_services");
-		const headerbutton_more__ = document.getElementById("headerbutton_more");
+			const headerbutton_home___ = document.getElementById("headerbutton_home_");
+			const headerbutton_about___ = document.getElementById("headerbutton_about_");
+			const headerbutton_services___ = document.getElementById("headerbutton_services_");
 
-		const headerbutton_home___ = document.getElementById("headerbutton_home_");
-		const headerbutton_about___ = document.getElementById("headerbutton_about_");
-		const headerbutton_services___ = document.getElementById("headerbutton_services_");
+			const headerbutton_home_pos = user_utils.getElementYPos(headerbutton_home___);
+			const headerbutton_about_pos = user_utils.getElementYPos(headerbutton_about___);
+			const headerbutton_services_pos = user_utils.getElementYPos(headerbutton_services___);
+			const headerbutton_more_pos = user_utils.getElementYPos(document.getElementById("headerbutton_more_"));
 
-		const headerbutton_home_pos = user_utils.getElementYPos(headerbutton_home___);
-		const headerbutton_about_pos = user_utils.getElementYPos(headerbutton_about___);
-		const headerbutton_services_pos = user_utils.getElementYPos(headerbutton_services___);
-		const headerbutton_more_pos = user_utils.getElementYPos(document.getElementById("headerbutton_more_"));
+			console.log("headerbutton_home_pos: " + headerbutton_home_pos);
 
-		console.log("headerbutton_home_pos: " + headerbutton_home_pos);
+			console.log("headerbutton_about_pos: " + headerbutton_about_pos);
 
-		console.log("headerbutton_about_pos: " + headerbutton_about_pos);
+			console.log("headerbutton_services_pos: " + headerbutton_services_pos);
 
-		console.log("headerbutton_services_pos: " + headerbutton_services_pos);
-
-		console.log("headerbutton_more_pos: " + headerbutton_more_pos);
+			console.log("headerbutton_more_pos: " + headerbutton_more_pos);
 
 
-		window.addEventListener("scroll", function(){
-			let scroll_pos_y = window.scrollY;
+			window.addEventListener("scroll", function(){
+				let scroll_pos_y = window.scrollY;
 
-			//console.log("scroll_pos_y: " + scroll_pos_y);
-			if(scroll_pos_y <= document.documentElement.scrollHeight)
-			{
-				headerbutton_home__.style.textDecoration = "none";
-				headerbutton_about__.style.textDecoration = "none";
-				headerbutton_services__.style.textDecoration = "none";
-				headerbutton_more__.style.textDecoration = "underline";
-			}
-			if(scroll_pos_y <= headerbutton_more_pos-user_utils.getReductIndex())
-			{
-				headerbutton_home__.style.textDecoration = "none";
-				headerbutton_about__.style.textDecoration = "none";
-				headerbutton_services__.style.textDecoration = "underline";
-				headerbutton_more__.style.textDecoration = "none";
-			}
-			if(scroll_pos_y <= headerbutton_services_pos-user_utils.getReductIndex())
-			{
-				headerbutton_home__.style.textDecoration = "none";
-				headerbutton_about__.style.textDecoration = "underline";
-				headerbutton_services__.style.textDecoration = "none";
-				headerbutton_more__.style.textDecoration = "none";
-			}
-			if(scroll_pos_y <= headerbutton_about_pos-user_utils.getReductIndex())
-			{
-				headerbutton_home__.style.textDecoration = "underline";
-				headerbutton_about__.style.textDecoration = "none";
-				headerbutton_services__.style.textDecoration = "none";
-				headerbutton_more__.style.textDecoration = "none";
-			}
-		});
-		
+				//console.log("scroll_pos_y: " + scroll_pos_y);
+				if(scroll_pos_y <= document.documentElement.scrollHeight)
+				{
+					headerbutton_home__.style.textDecoration = "none";
+					headerbutton_about__.style.textDecoration = "none";
+					headerbutton_services__.style.textDecoration = "none";
+					headerbutton_more__.style.textDecoration = "underline";
+				}
+				if(scroll_pos_y <= headerbutton_more_pos-user_utils.getReductIndex())
+				{
+					headerbutton_home__.style.textDecoration = "none";
+					headerbutton_about__.style.textDecoration = "none";
+					headerbutton_services__.style.textDecoration = "underline";
+					headerbutton_more__.style.textDecoration = "none";
+				}
+				if(scroll_pos_y <= headerbutton_services_pos-user_utils.getReductIndex())
+				{
+					headerbutton_home__.style.textDecoration = "none";
+					headerbutton_about__.style.textDecoration = "underline";
+					headerbutton_services__.style.textDecoration = "none";
+					headerbutton_more__.style.textDecoration = "none";
+				}
+				if(scroll_pos_y <= headerbutton_about_pos-user_utils.getReductIndex())
+				{
+					headerbutton_home__.style.textDecoration = "underline";
+					headerbutton_about__.style.textDecoration = "none";
+					headerbutton_services__.style.textDecoration = "none";
+					headerbutton_more__.style.textDecoration = "none";
+				}
+			});
+		}
 	}
 });
