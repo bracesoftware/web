@@ -72,6 +72,23 @@ let user_utils = {
 		}
 		user_utils.consoleOutput("Client's OS is unknown.");
 		return 0;
+	},
+	isMobile: function()
+	{
+		return ( ( window.innerWidth <= 800 ) && ( window.innerHeight <= 600 ) );
+	},
+	isMobile_log: function()
+	{
+		let check = ( ( window.innerWidth <= 800 ) && ( window.innerHeight <= 600 ) );
+		if(check)
+		{
+			user_utils.consoleOutput("Client is using a mobile device.");
+		}
+		if(!check)
+		{
+			user_utils.consoleOutput("Client is not using a mobile device.");
+		}
+		return check;
 	}
 }
 
