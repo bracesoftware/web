@@ -41,29 +41,17 @@ the Initial Developer. All Rights Reserved.
 	<div id="loader-wrapper">
 		<div id="loader"></div>
 	</div>
-	<header>
+	<header id="page_header">
 		<div class="logo">
 			<img class="apply_border_radius" src="brace_webpic.png" alt="BRACE Logo">
 		</div>
 		<nav>
-			<ul>
-				<!--<button class="homebutton" id="headerbutton_home"><li><a href="#home">Home</a></li></button>
-				<button class="homebutton" id="headerbutton_about"><li><a href="#about">About Us</a></li></button>
-				<button class="homebutton" id="headerbutton_services"><li><a href="#services">Services</a></li></button>
-				-->
+			<ul><!--HEADER-->
 				<div class="dropdown_container">
 					<headerbutton id="headerbutton_home" onclick="brace_redirect(BRACE_LINK__HOMEBUTTON)">HOME</headerbutton>
 					<headerbutton id="headerbutton_about" onclick="brace_redirect(BRACE_LINK__ABOUTUSBUTTON)">ABOUT</headerbutton>
 					<headerbutton id="headerbutton_services" onclick="brace_redirect(BRACE_LINK__SERVICESBUTTON)">SERVICES</headerbutton>
 				</div>
-				<!--<div class="dropdown">
-					<homebutton id="headerbutton_more">More...</homebutton>
-					<div class="dropdown-content">
-						<homebutton><a href="#PawnScript">PawnScript</a></homebutton>
-						<homebutton><a href="#DamnLarper">Damn Larper</a></homebutton>
-					</div>
-				</div>
-				-->
 				<div class="dropdown_container">
 					<headerbutton id="headerbutton_more" onclick="openDropdown('headerbutton_more','mydropdown')">PRODUCTS &#8595;</headerbutton>
 					<div class="dropdown" id="mydropdown">
@@ -88,20 +76,9 @@ the Initial Developer. All Rights Reserved.
 				</div>
 
 				<div class="dropdown_container">
-					<headerbutton id="headerbutton_home" onclick="window.location.href='index.html'">&#8635; REFRESH</headerbutton>
+					<headerbutton id="headerbutton_refresh" onclick="window.location.href='index.html'">&#8635; REFRESH</headerbutton>
 				</div>
-				<!--
-				<button class="homebutton" onclick="openModal('myModal')">Otvori Pop-up</button>
-				<div id="myModal" class="modal">
-					<div class="modal-content">
-						<img class="apply_border_radius" src="brace_slogan.png">
-						<span class="close" onclick="closeModal()">&times;</span>
-						<h2>Obavijest</h2>
-						<p>Ovo je pop-up poruka!</p>
-					</div>
-				</div>
-				-->
-			</ul>
+			</ul><!--HEADER-->
 		</nav>
 	</header>
 

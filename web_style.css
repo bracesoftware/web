@@ -578,32 +578,32 @@ button {
 /******************/
 
 headerbutton {
-    position: relative;
-    margin-left: 4px;
-    margin-right: 4px;
-    text-decoration: none;
-    font-family: "Verdana";
-    color: #a0a0a0;
-    font-size: 14px;
-    letter-spacing: 1px;
-    padding: 5px 10px;
+	position: relative;
+	margin-left: 4px;
+	margin-right: 4px;
+	text-decoration: none;
+	font-family: "Verdana";
+	color: #a0a0a0;
+	font-size: 14px;
+	letter-spacing: 1px;
+	padding: 5px 10px;
 }
 headerbutton:after {
-    content: "";
-    position: absolute;
-    background-color: var(--green_color);
-    height: 3px;
-    width: 0;
-    left: 0;
-    bottom: -1px;
-    transition: 0.3s;
+	content: "";
+	position: absolute;
+	background-color: var(--green_color);
+	height: 3px;
+	width: 0;
+	left: 0;
+	bottom: -1px;
+	transition: 0.3s;
 }
 headerbutton:hover {
-    color: #ffffff;
-    cursor: pointer;
+	color: #ffffff;
+	cursor: pointer;
 }
 headerbutton:hover:after {
-    width: 100%;
+	width: 100%;
 }
 headerbutton:active{
 	color: var(--green_color);

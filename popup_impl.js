@@ -22,15 +22,20 @@ the Initial Developer. All Rights Reserved.
 
 // Dohvati modal
 let modal = document.getElementById("myModal");
+let modal_opened = false;
+let modal_interaction_allowed = false;
 function openModal(modalid)
 {
 	modal = document.getElementById(modalid);
+	modal_interaction_allowed = false;
 	openModal__();
+	setTimeout(updateModalInteraction,500);
 }
 
 // Kada korisnik klikne na dugme, otvori modal
 function openModal__() 
 {
+	modal_opened = true;
 	modal.style.display = "block";
 	modal.classList.add("fade-in");
 }
@@ -44,10 +49,24 @@ window.onclick = function(event) {
 
 // Funkcija za zatvaranje modala sa animacijom
 function closeModal() {
+	modal_opened = false;
 	modal.classList.remove("fade-in");
 	modal.classList.add("fade-out");
 	modal.addEventListener("animationend", function() {
 		modal.style.display = "none";
 		modal.classList.remove("fade-out");
 	}, { once: true });
+}
+
+let header = document.getElementById('page_header');
+header.addEventListener('click', function()
+{
+	if(modal_opened == true && modal_interaction_allowed)
+	{
+		closeModal();
+	}
+});
+
+function updateModalInteraction(){
+	modal_interaction_allowed = true;
 }
