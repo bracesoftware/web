@@ -65,6 +65,7 @@ icon_button img:active{
 	position: relative;
 	max-width: 800px;
 	margin: auto;
+	padding: 10px;
 }
 
 .slide {
@@ -192,8 +193,10 @@ section {
 	text-align: right;
 }
 
-#about, #services {
+#about, #services, #privacy_policy,#PawnScript, #DamnLarper, #__slideshow, #default_box {
 	background-color: #333;
+	margin-left: 250px;
+	margin-right: 250px;
 	color: white;
 }
 
@@ -202,16 +205,9 @@ section {
 	background-size: cover;
 }
 
-#services{
+#services,#privacy_policy{
 	background-image: url("visual_resources/brace_servicesbkg.png");
 	background-size: cover;
-}
-
-#PawnScript, #DamnLarper, #__slideshow, #default_box {
-	background-color: #333; /* dark gray background */
-	color: white; /* white text color */
-	/*box-shadow: 0 0 20px rgba(255, 255, 255, 0.3); /* white glow */
-	
 }
 
 .centerthetext {
@@ -615,4 +611,25 @@ headerbutton:hover:after {
 }
 headerbutton:active{
 	color: var(--green_color);
+}
+/**********/
+
+#privacy_policy h1{
+	margin-left: 10px;
+	text-decoration: underline;
+}
+#privacy_policy h2{
+	margin-left: 20px;
+	text-decoration: underline;
+}
+#privacy_policy h3{
+	margin-left: 30px;
+	text-decoration: underline;
+}
+#privacy_policy p, #privacy_policy p sub{
+	margin-left: 40px;
+}
+
+#privacy_policy li{
+	margin-left: 60px;
 }

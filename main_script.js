@@ -48,6 +48,8 @@ const BRACE_LINK__SERVICESBUTTON = 12;
 const BRACE_LINK__PAWNSCRIPTBUTTON = 13;
 const BRACE_LINK__DAMNLARPERBUTTON = 14;
 
+const BRACE_LINK__PP = 15;
+
 //AboutUs
 const BRACE_DC_LINK = "https://discord.gg/wjxKdRDuUU";
 const BRACE_GITHUB_LINK = "https://github.com/bracesoftware";
@@ -59,9 +61,10 @@ const BRACE_PS_DW = "https://github.com/bracesoftware/pawnscript/releases";
 const BRACE_DL_DW = "https://github.com/bracesoftware/damnlarper/releases";
 
 //Files
-const BRACE_HOMEPAGE_HTML = "index.html"
-const BRACE_PAWNSCRIPT_HTML = "pawnscript.html"
-const BRACE_DAMNLARPER_HTML = "damnlarper.html"
+const BRACE_HOMEPAGE_HTML = "index.html";
+const BRACE_PAWNSCRIPT_HTML = "pawnscript.html";
+const BRACE_DAMNLARPER_HTML = "damnlarper.html";
+const BRACE_PRIVACYPOLICY_HTML = "privacy_policy.html";
 
 // Social media
 const BRACE_INSTAGRAM_LINK = "https://www.instagram.com/bracesoftware";
@@ -132,6 +135,11 @@ function brace_redirect(linkid)
 	if(linkid == BRACE_LINK__DAMNLARPERBUTTON)
 	{
 		window.location.href = "#DamnLarper";
+	}
+
+	if(linkid == BRACE_LINK__PP)
+	{
+		window.location.href = BRACE_PRIVACYPOLICY_HTML;
 	}
 }
 
