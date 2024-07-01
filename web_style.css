@@ -231,13 +231,21 @@ section {
 }
 
 footer {
-	background-color: #333; /* black color */
-	color: white;
-	text-align: center;
-	padding: 10px 0;
-	/*position: fixed; NEŠ BIT FIKSED*/
+	font-size: small;
+	align-items: center;
 	width: 100%;
-	bottom: 0;
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+footer img{
+	width: 20px;
+	margin: 10px;
+}
+
+footer headerbutton
+{
+	font-size: small;
 }
 
 /*BUTTON*/
