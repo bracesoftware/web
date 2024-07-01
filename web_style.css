@@ -134,6 +134,7 @@ header {
 	position: fixed;
 	border-radius: 5px;
 	top: 0;
+	width: 100%;
 	justify-content: space-between;
 	align-items: center;
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Senka dugmeta */
@@ -142,7 +143,7 @@ header {
 
 header .logo img {
 	height: 50px;
-	margin-left: 20px;
+	margin-left: 50px;
 }
 
 nav ul {
@@ -150,6 +151,7 @@ nav ul {
 	display: flex;
 	margin: 0;
 	padding: 10px;
+	margin-right: 400px;
 }
 
 nav ul li {
@@ -168,6 +170,10 @@ section {
 	border-radius: 8px;
 	/*box-shadow: 0 0 20px rgba(255, 255, 255, 0.3); /* white glow */
 	background-color: white;
+}
+
+#home,#home_damnlarper{
+	margin-top: 100px;
 }
 
 #home {
@@ -232,7 +238,6 @@ footer {
 	/*position: fixed; NEŠ BIT FIKSED*/
 	width: 100%;
 	bottom: 0;
-	box-shadow: 0 0 20px rgba(255, 255, 255, 0.3); /* white glow */
 }
 
 /*BUTTON*/
@@ -374,72 +379,36 @@ code {
  * */
 
 
- .navbar {
-	background-color: #333;
-	padding: 10px;
-}
-
  .menu {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
 }
 
- .menu-item {
-	position: relative;
-	display: inline-block;
-}
 
-
- .menu-button {
-	border: none;
-	outline: none;
-	cursor: pointer;
-	font-size: 16px;
-	padding: 10px 16px;
-	/*font-weight: bold;*/
-	font-family: Verdana, sans-serif;
-	border-radius: 5px; /* Zaobljeni uglovi */
-	background-color: #333; /* Boja pozadine */
-	color: #fff; /* Boja teksta */
-	transition: background-color 0.3s ease; /* Tranzicija za boju pozadine */
-	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Senka dugmeta */
-}
-
- .menu-button:hover {
-	background-color: var(--green_color);
-}
- .menu-button:active {
-	transform: translateY(2px); /* Pomeranje dugmeta na dole za 1 piksel */
-	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1); /* Manja senka */
-}
-
-
- .dropdown {
+.dropdown {
 	position: absolute;
 	background-color: #242424;
-	
 	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 	z-index: 1;
 	opacity: 0;
-	border-radius: 5px;
 	transform: translateY(-10px);
 	transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s 0.3s;
 	visibility: hidden;
+
+	margin-top: 15px;
+	border-radius: 5px;
 }
 
- .dropdown li a {
-	color: white;
-	padding: 10px 15px;
-	text-decoration: none;
+.dropdown headerbutton {
 	display: block;
+	text-decoration: none;
+	text-align: center;
+	padding: 14px 14px;
 }
 
- .dropdown li a:hover {
-	background-color: #575757;
-}
 
- .dropdown.show {
+.dropdown.show {
 	opacity: 1;
 	transform: translateY(0);
 	visibility: visible;
@@ -606,3 +575,37 @@ button {
 	animation: fadeOut 0.5s;
 }
 
+/******************/
+
+headerbutton {
+    position: relative;
+    margin-left: 4px;
+    margin-right: 4px;
+    text-decoration: none;
+    font-family: "Verdana";
+    color: #a0a0a0;
+    font-size: 14px;
+    letter-spacing: 1px;
+    padding: 5px 10px;
+}
+headerbutton:after {
+    content: "";
+    position: absolute;
+    background-color: var(--green_color);
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -1px;
+    transition: 0.3s;
+}
+headerbutton:hover {
+    color: #ffffff;
+    cursor: pointer;
+}
+headerbutton:hover:after {
+    width: 100%;
+}
+headerbutton:active{
+	/*color: var(--green_color);*/
+	transform: translateY(2px);
+}

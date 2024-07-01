@@ -42,6 +42,11 @@ const BRACE_LINK__IG = 7;
 const BRACE_LINK__YT = 8;
 const BRACE_LINK__TT = 9;
 
+const BRACE_LINK__HOMEBUTTON = 10;
+const BRACE_LINK__ABOUTUSBUTTON = 11;
+const BRACE_LINK__SERVICESBUTTON = 12;
+const BRACE_LINK__PAWNSCRIPTBUTTON = 13;
+const BRACE_LINK__DAMNLARPERBUTTON = 14;
 
 //AboutUs
 const BRACE_DC_LINK = "https://discord.gg/wjxKdRDuUU";
@@ -106,6 +111,27 @@ function brace_redirect(linkid)
 	if(linkid == BRACE_LINK__DLPAGE)
 	{
 		window.location.href = BRACE_DAMNLARPER_HTML;
+	}
+
+	if(linkid == BRACE_LINK__HOMEBUTTON)
+	{
+		window.location.href = "#home";
+	}
+	if(linkid == BRACE_LINK__ABOUTUSBUTTON)
+	{
+		window.location.href = "#about";
+	}
+	if(linkid == BRACE_LINK__SERVICESBUTTON)
+	{
+		window.location.href = "#services";
+	}
+	if(linkid == BRACE_LINK__PAWNSCRIPTBUTTON)
+	{
+		window.location.href = "#PawnScript";
+	}
+	if(linkid == BRACE_LINK__DAMNLARPERBUTTON)
+	{
+		window.location.href = "#DamnLarper";
 	}
 }
 
@@ -241,31 +267,31 @@ document.addEventListener("DOMContentLoaded", function() {
 				//console.log("scroll_pos_y: " + scroll_pos_y);
 				if(scroll_pos_y <= document.documentElement.scrollHeight)
 				{
-					headerbutton_home__.style.textDecoration = "none";
-					headerbutton_about__.style.textDecoration = "none";
-					headerbutton_services__.style.textDecoration = "none";
-					headerbutton_more__.style.textDecoration = "underline";
+					headerbutton_home__.style.fontWeight = "normal";
+					headerbutton_about__.style.fontWeight = "normal";
+					headerbutton_services__.style.fontWeight = "normal";
+					headerbutton_more__.style.fontWeight = "bold";
 				}
 				if(scroll_pos_y <= headerbutton_more_pos-user_utils.getReductIndex())
 				{
-					headerbutton_home__.style.textDecoration = "none";
-					headerbutton_about__.style.textDecoration = "none";
-					headerbutton_services__.style.textDecoration = "underline";
-					headerbutton_more__.style.textDecoration = "none";
+					headerbutton_home__.style.fontWeight = "normal";
+					headerbutton_about__.style.fontWeight = "normal";
+					headerbutton_services__.style.fontWeight = "bold";
+					headerbutton_more__.style.fontWeight = "normal";
 				}
 				if(scroll_pos_y <= headerbutton_services_pos-user_utils.getReductIndex())
 				{
-					headerbutton_home__.style.textDecoration = "none";
-					headerbutton_about__.style.textDecoration = "underline";
-					headerbutton_services__.style.textDecoration = "none";
-					headerbutton_more__.style.textDecoration = "none";
+					headerbutton_home__.style.fontWeight = "normal";
+					headerbutton_about__.style.fontWeight = "bold";
+					headerbutton_services__.style.fontWeight = "normal";
+					headerbutton_more__.style.fontWeight = "normal";
 				}
 				if(scroll_pos_y <= headerbutton_about_pos-user_utils.getReductIndex())
 				{
-					headerbutton_home__.style.textDecoration = "underline";
-					headerbutton_about__.style.textDecoration = "none";
-					headerbutton_services__.style.textDecoration = "none";
-					headerbutton_more__.style.textDecoration = "none";
+					headerbutton_home__.style.fontWeight = "bold";
+					headerbutton_about__.style.fontWeight = "normal";
+					headerbutton_services__.style.fontWeight = "normal";
+					headerbutton_more__.style.fontWeight = "normal";
 				}
 			});
 		}

@@ -31,6 +31,7 @@ the Initial Developer. All Rights Reserved.
 	<link rel="stylesheet" href="web_style.css">
 	<script src="user_utils.js"></script>
 	<script src="main_script.js"></script>
+	<script src="dropdown_impl.js"></script>
 	<script>
 		console.log("index.html (Brace Inc.): script element called.")
 		current_page = PAGE_BRACE_HOMEPAGE;
@@ -46,10 +47,15 @@ the Initial Developer. All Rights Reserved.
 		</div>
 		<nav>
 			<ul>
-				<button class="homebutton" id="headerbutton_home"><li><a href="#home">Home</a></li></button>
+				<!--<button class="homebutton" id="headerbutton_home"><li><a href="#home">Home</a></li></button>
 				<button class="homebutton" id="headerbutton_about"><li><a href="#about">About Us</a></li></button>
 				<button class="homebutton" id="headerbutton_services"><li><a href="#services">Services</a></li></button>
-
+				-->
+				<div class="dropdown_container">
+					<headerbutton id="headerbutton_home" onclick="brace_redirect(BRACE_LINK__HOMEBUTTON)">HOME</headerbutton>
+					<headerbutton id="headerbutton_about" onclick="brace_redirect(BRACE_LINK__ABOUTUSBUTTON)">ABOUT</headerbutton>
+					<headerbutton id="headerbutton_services" onclick="brace_redirect(BRACE_LINK__SERVICESBUTTON)">SERVICES</headerbutton>
+				</div>
 				<!--<div class="dropdown">
 					<homebutton id="headerbutton_more">More...</homebutton>
 					<div class="dropdown-content">
@@ -58,18 +64,28 @@ the Initial Developer. All Rights Reserved.
 					</div>
 				</div>
 				-->
-				
+				<div class="dropdown_container">
+					<headerbutton id="headerbutton_more" onclick="openDropdown('headerbutton_more','mydropdown')">PRODUCTS</headerbutton>
+					<div class="dropdown" id="mydropdown">
+						<headerbutton onclick="brace_redirect(BRACE_LINK__PAWNSCRIPTBUTTON)">PawnScript</headerbutton>
+						<headerbutton onclick="brace_redirect(BRACE_LINK__DAMNLARPERBUTTON)">Damn Larper</headerbutton>
+					</div>
+				</div>
+				<div class="dropdown_container">
+					<headerbutton id="headerbutton_more2" onclick="openDropdown('headerbutton_more2','mydropdown2')">MORE</headerbutton>
+					<div class="dropdown" id="mydropdown2">
+						<headerbutton onclick="openModal('ContactInfo')">CONTACT</headerbutton>
+					</div>
+				</div>
 
-				<ul class="menu">
-					<li class="menu-item">
-						<button class="menu-button" id="headerbutton_more"><li><a>More...</a></li></button>
-						<ul class="dropdown">
-							<button class="optionbutton"><a href="#PawnScript">PawnScript</a></button>
-							<button class="optionbutton"><a href="#DamnLarper">DamnLarper</a></button>
-						</ul>
-					</li>
-				</ul>
-
+				<div id="ContactInfo" class="modal">
+					<div class="modal-content">
+						<img class="apply_border_radius" src="brace_slogan.png">
+						<span class="close" onclick="closeModal()">&times;</span>
+						<h2>Contact Mail</h2>
+						<p>Contact us via mail at <code>bracetm.official@gmail.com</code>.</p>
+					</div>
+				</div>
 				<!--
 				<button class="homebutton" onclick="openModal('myModal')">Otvori Pop-up</button>
 				<div id="myModal" class="modal">
@@ -186,7 +202,6 @@ the Initial Developer. All Rights Reserved.
 			<img class="apply_border_radius" src="visual_resources/tiktok_logo.png">
 		</icon_button>
 	</footer>
-	<script src="dropdown_impl.js"></script>
 	<script src="popup_impl.js"></script>
 </body>
 </html>

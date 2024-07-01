@@ -20,23 +20,38 @@ the Initial Developer. All Rights Reserved.
 
 */
 
-document.addEventListener('DOMContentLoaded', function() {
-	
-	const menuButton = document.querySelector('.menu-button');
-	const dropdown = document.querySelector('.dropdown');
 
-	menuButton.addEventListener('click', function() {
-		if (dropdown.classList.contains('show')) {
-			dropdown.classList.remove('show');
-		} else {
-			dropdown.classList.add('show');
-		}
-	});
+let dropdown = document.getElementById('-');
+let dropdown_button = document.getElementById('-');
 
-	// Zatvaranje dropdown menija klikom izvan njega
-	document.addEventListener('click', function(event) {
-		if (!menuButton.contains(event.target) && !dropdown.contains(event.target)) {
-			dropdown.classList.remove('show');
-		}
-	});
+function openDropdown(buttonid, dropdownid)
+{
+	if(dropdown != null && dropdown != document.getElementById(dropdownid))
+	{
+		dropdown.classList.remove('show');
+	}
+	dropdown_button = document.getElementById(buttonid);
+	dropdown = document.getElementById(dropdownid);
+	openDropdown__();
+}
+
+function openDropdown__() 
+{
+	if(dropdown.classList.contains('show'))
+	{
+		dropdown.classList.remove('show');
+	}
+	else
+	{
+		dropdown.classList.add('show');
+	}
+}
+
+// Zatvaranje dropdown menija klikom izvan njega
+document.addEventListener('click', function(event) 
+{
+	if(!dropdown_button.contains(event.target) && !dropdown.contains(event.target))
+	{
+		dropdown.classList.remove('show');
+	}
 });
