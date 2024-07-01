@@ -76,7 +76,7 @@ the Initial Developer. All Rights Reserved.
 				</div>
 
 				<div class="dropdown_container">
-					<headerbutton id="headerbutton_refresh" onclick="window.location.href='index.html'">&#8635; REFRESH</headerbutton>
+					<headerbutton id="headerbutton_refresh" onclick="brace_redirect(BRACE_LINK__HOMEPAGE)">&#8635; REFRESH</headerbutton>
 				</div>
 			</ul><!--HEADER-->
 		</nav>
@@ -94,11 +94,7 @@ the Initial Developer. All Rights Reserved.
 		<p>Brace&#8482; Co. is a small IT company dedicated to making information technology fun and interesting to newbies and future generations.</p>
 		<li>Interested in contribution, development or whatsoever? Click those buttons down there!</li>
 		<p>All of the official products of the Brace™ team are licensed with Mozilla Public License. We're fully open source!</p>
-		
-		<button class="normalbutton" onclick="brace_redirect(BRACE_LINK__DISCORD)">BRACE Discord</button>
-		
-		<button class="normalbutton" onclick="brace_redirect(BRACE_LINK__GITHUB)">BRACE GitHub</button>
-		
+
 		<div class="slideshow-container">
 			<div class="slide">
 				<img src="visual_resources/brace_slide1.png">
@@ -173,10 +169,12 @@ the Initial Developer. All Rights Reserved.
 	<footer>
 		<img class="apply_border_radius" src="brace_tinylogo.png">
 		<p><b>&copy; 2024 Brace&#8482; Co.</b> All rights reserved.</p>
+		<headerbutton onclick="brace_redirect(BRACE_LINK__PP)">PRIVACY POLICY</headerbutton>
+		<headerbutton onclick="brace_redirect(BRACE_LINK__GITHUB)"><code>GitHub</code></headerbutton>
+		<headerbutton onclick="brace_redirect(BRACE_LINK__DISCORD)">Discord</headerbutton>
 		<headerbutton onclick="brace_redirect(BRACE_LINK__IG)">Instagram</headerbutton>
 		<headerbutton onclick="brace_redirect(BRACE_LINK__YT)">YouTube</headerbutton>
 		<headerbutton onclick="brace_redirect(BRACE_LINK__TT)">TikTok</headerbutton>
-		<headerbutton onclick="brace_redirect(BRACE_LINK__PP)">PRIVACY POLICY</headerbutton>
 	</footer>
 	<script src="popup_impl.js"></script>
 </body>

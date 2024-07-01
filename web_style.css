@@ -23,6 +23,7 @@ the Initial Developer. All Rights Reserved.
 :root{
 	--green_color: #6c8b21;
 	--bright_green_color: #8abb27;
+	--subtext_color: #a0a0a0;
 }
 
 
@@ -242,6 +243,10 @@ footer img{
 footer headerbutton
 {
 	font-size: small;
+}
+
+footer p {
+	color: var(--subtext_color);
 }
 
 /*BUTTON*/
@@ -587,7 +592,7 @@ headerbutton {
 	margin-right: 4px;
 	text-decoration: none;
 	font-family: "Verdana";
-	color: #a0a0a0;
+	color: var(--subtext_color);
 	font-size: 14px;
 	letter-spacing: 1px;
 	padding: 5px 10px;
@@ -611,6 +616,10 @@ headerbutton:hover:after {
 }
 headerbutton:active{
 	color: var(--green_color);
+}
+
+headerbutton code:active{
+	color: #fff;
 }
 /**********/
 
