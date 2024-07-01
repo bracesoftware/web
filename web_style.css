@@ -606,6 +606,5 @@ headerbutton:hover:after {
     width: 100%;
 }
 headerbutton:active{
-	/*color: var(--green_color);*/
-	transform: translateY(2px);
+	color: var(--green_color);
 }
