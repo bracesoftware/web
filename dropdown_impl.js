@@ -50,8 +50,11 @@ function openDropdown__()
 // Zatvaranje dropdown menija klikom izvan njega
 document.addEventListener('click', function(event) 
 {
-	if(!dropdown_button.contains(event.target) && !dropdown.contains(event.target))
+	if(dropdown != null)
 	{
-		dropdown.classList.remove('show');
+		if(!dropdown_button.contains(event.target) && !dropdown.contains(event.target))
+		{
+			dropdown.classList.remove('show');
+		}
 	}
 });
