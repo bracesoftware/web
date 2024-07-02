@@ -1,0 +1,93 @@
+<!--
+
+The ORIGINAL CODE is the `BRACE WEBSITE` Source Code.
+The INITIAL DEVELOPER is Brace Inc., DEntisT.
+
+Version: MPL 1.1
+
+The contents of this file are subject to the Mozilla Public License Version 
+1.1 the "License"; you may not use this file except in compliance with 
+the License. You may obtain a copy of the License at 
+http://www.mozilla.org/MPL/
+
+Software distributed under the License is distributed on an "AS IS" basis,
+WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+for the specific language governing rights and limitations under the
+License.
+
+Portions created by the Initial Developer are Copyright (c) 2022
+the Initial Developer. All Rights Reserved.
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="icon" href="brace_logo.png" type="image/icon type">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Brace&#8482; Co.</title>
+
+	<link rel="stylesheet" href="web_style.css">
+	<script src="user_utils.js"></script>
+	<script src="main_script.js"></script>
+	<script src="dropdown_impl.js"></script>
+	<script>
+		console.log("index.html (Brace Inc.): script element called.")
+		current_page = PAGE_BRACE_HOMEPAGE;
+	</script>
+</head>
+<body>
+	<div id="loader-wrapper">
+		<div id="loader"></div>
+	</div>
+	<header id="page_header">
+		<mobile>
+			<img class="apply_border_radius" src="brace_tinylogo.png">
+			<div class="dropdown_container">
+				<headerbutton id="headerbutton_more2" onclick="openDropdown('headerbutton_more2','mydropdown2')">SELECT PAGE &#8595;</headerbutton>
+				<div class="dropdown" id="mydropdown2">
+					<headerbutton onclick="openModal('ContactInfo')">CONTACT</headerbutton>
+					<headerbutton id="headerbutton_refresh" onclick="brace_redirect(BRACE_LINK__HOMEPAGE)">&#8635; REFRESH</headerbutton>
+				</div>
+			</div>
+			<div class="dropdown_container">
+				<headerbutton id="headerbutton_more" onclick="openDropdown('headerbutton_more','mydropdown')">PRODUCTS &#8595;</headerbutton>
+				<div class="dropdown" id="mydropdown">
+					<headerbutton onclick="brace_redirect(BRACE_LINK__PAWNSCRIPT)">PawnScript</headerbutton>
+					<headerbutton onclick="brace_redirect(BRACE_LINK__DAMNLARPER)">Damn Larper</headerbutton>
+				</div>
+			</div>
+
+			<div id="ContactInfo" class="modal">
+				<div class="modal-content">
+					<span class="close" onclick="closeModal()">&times;</span>
+					<h2>Contact Mail</h2>
+					<p>Contact us via mail at <code>bracetm.official@gmail.com</code>.</p>
+				</div>
+			</div>
+		</mobile>
+	</header>
+	<!-- ------------------- -->
+	<!-- PAGE -->
+	<!-- ------------------- -->
+	<section id="home">
+		<h1 class="home_text">Welcome to <code>Brace&#8482; Co.</code>Mobile!</h1>
+		<p class="home_text">This is our <code>beta</code> website designed for mobile devices!</p>
+	</section>
+	<!-- ------------------- -->
+	<!-- FOOTER -->
+	<!-- ------------------- -->
+	<footer>
+		<img class="apply_border_radius" src="brace_tinylogo.png">
+		<p><b>&copy; 2024 Brace&#8482; Co.</b> All rights reserved.</p>
+		<headerbutton onclick="brace_redirect(BRACE_LINK__PP)">PRIVACY POLICY</headerbutton>
+		<headerbutton onclick="brace_redirect(BRACE_LINK__GITHUB)"><code>GitHub</code></headerbutton>
+		<headerbutton onclick="brace_redirect(BRACE_LINK__DISCORD)">Discord</headerbutton>
+		<headerbutton onclick="brace_redirect(BRACE_LINK__IG)">Instagram</headerbutton>
+		<headerbutton onclick="brace_redirect(BRACE_LINK__YT)">YouTube</headerbutton>
+		<headerbutton onclick="brace_redirect(BRACE_LINK__TT)">TikTok</headerbutton>
+	</footer>
+	<script src="popup_impl.js"></script>
+</body>
+</html>

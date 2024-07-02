@@ -75,7 +75,7 @@ let user_utils = {
 	},
 	isMobile: function()
 	{
-		return ( ( window.innerWidth <= 800 ) && ( window.innerHeight <= 600 ) );
+		return (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent));
 	},
 	isMobile_log: function()
 	{

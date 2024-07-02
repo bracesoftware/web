@@ -39,141 +39,30 @@ the Initial Developer. All Rights Reserved.
 </head>
 <body>
 	<div id="loader-wrapper">
-		<div id="loader"></div>
+	    <div id="loader"></div>
+	    <div id="loading-text">
+	    	<h1>Loading...</h1>
+	    </div>
+	    <div id="loading-text">
+	    	<p>This should not take long!</p>
+	    </div>
 	</div>
-	<header id="page_header">
-		<div class="logo">
-			<img class="apply_border_radius" src="brace_webpic.png" alt="BRACE Logo">
-		</div>
-		<nav>
-			<ul><!--HEADER-->
-				<div class="dropdown_container">
-					<headerbutton id="headerbutton_home" onclick="brace_redirect(BRACE_LINK__HOMEBUTTON)">HOME</headerbutton>
-					<headerbutton id="headerbutton_about" onclick="brace_redirect(BRACE_LINK__ABOUTUSBUTTON)">ABOUT</headerbutton>
-					<headerbutton id="headerbutton_services" onclick="brace_redirect(BRACE_LINK__SERVICESBUTTON)">SERVICES</headerbutton>
-				</div>
-				<div class="dropdown_container">
-					<headerbutton id="headerbutton_more" onclick="openDropdown('headerbutton_more','mydropdown')">PRODUCTS &#8595;</headerbutton>
-					<div class="dropdown" id="mydropdown">
-						<headerbutton onclick="brace_redirect(BRACE_LINK__PAWNSCRIPTBUTTON)">PawnScript</headerbutton>
-						<headerbutton onclick="brace_redirect(BRACE_LINK__DAMNLARPERBUTTON)">Damn Larper</headerbutton>
-					</div>
-				</div>
-				<div class="dropdown_container">
-					<headerbutton id="headerbutton_more2" onclick="openDropdown('headerbutton_more2','mydropdown2')">MORE &#8595;</headerbutton>
-					<div class="dropdown" id="mydropdown2">
-						<headerbutton onclick="openModal('ContactInfo')">CONTACT</headerbutton>
-						<headerbutton id="headerbutton_refresh" onclick="brace_redirect(BRACE_LINK__HOMEPAGE)">&#8635; REFRESH</headerbutton>
-					</div>
-				</div>
 
-				<div id="ContactInfo" class="modal">
-					<div class="modal-content">
-						<img class="apply_border_radius" src="brace_slogan.png">
-						<span class="close" onclick="closeModal()">&times;</span>
-						<h2>Contact Mail</h2>
-						<p>Contact us via mail at <code>bracetm.official@gmail.com</code>.</p>
-					</div>
-				</div>
 
-			</ul><!--HEADER-->
-		</nav>
-	</header>
-
-	<section id="home">
-		<img id="headerbutton_home_" class="apply_border_radius" src="brace_slogan.png" alt="BRACE Slogan">
-	</section>
-	
-	<!-- ------------------- -->
-	<!-- ABOUTUS -->
-	<!-- ------------------- -->
-	<section id="about">
-		<img id="headerbutton_about_" class="apply_border_radius" width="300" src="visual_resources/brace_aboutus.png" alt="BRACE Logo">
-		<p>Brace&#8482; Co. is a small IT company dedicated to making information technology fun and interesting to newbies and future generations.</p>
-		<li>Interested in contribution, development or whatsoever? Click those buttons down there!</li>
-		<p>All of the official products of the Brace™ team are licensed with Mozilla Public License. We're fully open source!</p>
-
-		<div class="slideshow-container">
-			<div class="slide">
-				<img src="visual_resources/brace_slide1.png">
-			</div>
-			<div class="slide">
-				<img src="visual_resources/brace_slide2.png">
-			</div>
-			<div class="slide">
-				<img src="visual_resources/brace_slide3.png">
-			</div>
-			<div class="slide">
-				<img src="visual_resources/brace_slide4.png">
-			</div>
-
-			<other-button class="prev" onclick="changeSlide(-1)">Prev</other-button>
-			<other-button class="next" onclick="changeSlide(1)">Next</other-button>
-		</div>
-	</section>
-	<!-- ------------------- -->
-	<!-- SERVICES -->
-	<!-- ------------------- -->
-	<section id="services">
-		<img id="headerbutton_services_" class="apply_border_radius"  width="300" src="visual_resources/brace_services.png">
-		<ul>
-			<li>Software Development</li>
-			<li>IT Consulting</li>
-			<li>Cloud Solutions</li>
-			<li>System Maintenance</li>
-		</ul>
-	</section>
-	<!-- ------------------- -->
-	<!-- PawnScript -->
-	<!-- ------------------- -->
-	<section id="PawnScript">
-		<img id="headerbutton_more_" class="apply_border_radius" width="30" src="visual_resources/pawnscript_logo.png" alt="PS Logo"> <img class="apply_border_radius" width="300" src="visual_resources/brace_pawnscript.png" alt="BRACE Logo">
-		<ul>
-			<li>PawnScript is a small interpreted semi-statically-typed object-oriented (and really memory-consuming) language written in Pawn and thus it is its extension (similar to C/C++ or Java/JavaScript). It is designed with the role of enabling modification of the gamemode code on the server during run-time.</li>
-			<li>It contains various features and things that aren't even introduced into Pawn itself. PawnScript has a very complex syntax which makes it very hard to learn but also fragile to small mistakes.</li>
-		</ul>
-		<button class="normalbutton" onclick="brace_redirect(BRACE_LINK__PAWNSCRIPT)">Download Now</button>
-		<button class="normalbutton" onclick="brace_redirect(BRACE_LINK__PAWNSCRIPTPAGE)">Learn more</button>
-	</section>
-	<!-- ------------------- -->
-	<!-- DamnLarper -->
-	<!-- ------------------- -->
-	<section id="DamnLarper">
-		<img class="apply_border_radius" width="100" src="visual_resources/damnlarper_logo.png" alt="DL Logo"> <img class="apply_border_radius" width="300" src="visual_resources/brace_damnlarper.png" alt="BRACE Logo">
-		<ul>
-			<li>Damn Larper is a multipurpose bot with many commands and features. It is basically a text-based game right in your server! This bot has a verification system, which is not allowing the unverified to send messages until they verify themselves. Besides verification, there are also moderation commands such as ban and kick commands.</li>
-			<li>In case you're searching for a fun bot, there are categories of commands for economy, custom text commands, miscellaneous commands, levelling system, bump system in development, list system with which you can make your own list and for example write down your chores on them.</li>
-			<li>And it's not over yet, you can basically take care of your virtual pet! You can get one at a petshop (it helps you gain sweet bonuses on economy commands!). There's also roleplaying, where you can buy items, craft items, go mining, hunting, fishing and chopping wood - in basic terms, get resources and be a boss (there are command cooldowns though, get premium to avoid them!).</li>
-			<li>You can also unlock achievements and get spectacular rewards once you complete them! Regarding to server security, there is a anti-raid and security system which is customizeable! There is also social media-like system where you can post messages and view them on a global feed. More features are waiting you once you add Damn Larper to your server!</li>
-		</ul>
-		<button class="normalbutton" onclick="brace_redirect(BRACE_LINK__DAMNLARPER)">Check Out</button>
-		<button class="normalbutton" onclick="brace_redirect(BRACE_LINK__DLPAGE)">Learn more</button>
-	</section>
-	<!-- ------------------- -->
-	<!-- TESTING -->
-	<!-- ------------------- -->
-	<section id="default_box" class="centerthetext">
-		<ul>
-			Have something to say?
-		</ul>
-		<input type="text" id="userInput" placeholder="Feedback:">
-		<button class="normalbutton" id="readButton">Submit</button>
-		<p id="output1"></p>
-		<sub id="output2"></sub>
-	</section>
-	<!-- ------------------- -->
-	<!-- FOOTER -->
-	<!-- ------------------- -->
-	<footer>
-		<img class="apply_border_radius" src="brace_tinylogo.png">
-		<p><b>&copy; 2024 Brace&#8482; Co.</b> All rights reserved.</p>
-		<headerbutton onclick="brace_redirect(BRACE_LINK__PP)">PRIVACY POLICY</headerbutton>
-		<headerbutton onclick="brace_redirect(BRACE_LINK__GITHUB)"><code>GitHub</code></headerbutton>
-		<headerbutton onclick="brace_redirect(BRACE_LINK__DISCORD)">Discord</headerbutton>
-		<headerbutton onclick="brace_redirect(BRACE_LINK__IG)">Instagram</headerbutton>
-		<headerbutton onclick="brace_redirect(BRACE_LINK__YT)">YouTube</headerbutton>
-		<headerbutton onclick="brace_redirect(BRACE_LINK__TT)">TikTok</headerbutton>
-	</footer>
+	<script>
+		setTimeout(redirect_init,500);
+		function redirect_init()
+		{
+			if(user_utils.isMobile())
+			{
+				window.location.href = "mobile_hmpg.html";
+			}
+			if(user_utils.isMobile() == false)
+			{
+				brace_redirect(BRACE_LINK__HOMEPAGE);
+			}
+		}
+	</script>
 	<script src="popup_impl.js"></script>
 </body>
 </html>

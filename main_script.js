@@ -61,10 +61,19 @@ const BRACE_PS_DW = "https://github.com/bracesoftware/pawnscript/releases";
 const BRACE_DL_DW = "https://github.com/bracesoftware/damnlarper/releases";
 
 //Files
-const BRACE_HOMEPAGE_HTML = "index.html";
+const BRACE_HOMEPAGE_HTML = "homepage.html";
 const BRACE_PAWNSCRIPT_HTML = "pawnscript.html";
 const BRACE_DAMNLARPER_HTML = "damnlarper.html";
 const BRACE_PRIVACYPOLICY_HTML = "privacy_policy.html";
+
+let MOBILE_ELEMENTS = {
+	BRACE_HOMEPAGE_HTML: function(){
+		return "mobile_hmpg.html";
+	},
+	BRACE_PRIVACYPOLICY_HTML: function(){
+		return "mobile_pp.html";
+	}
+};
 
 // Social media
 const BRACE_INSTAGRAM_LINK = "https://www.instagram.com/bracesoftware";
@@ -105,7 +114,14 @@ function brace_redirect(linkid)
 
 	if(linkid == BRACE_LINK__HOMEPAGE)
 	{
-		window.location.href = BRACE_HOMEPAGE_HTML;
+		if(user_utils.isMobile())
+		{
+			window.location.href = MOBILE_ELEMENTS.BRACE_HOMEPAGE_HTML();
+		}
+		if(user_utils.isMobile() == false)
+		{
+			window.location.href = BRACE_HOMEPAGE_HTML;
+		}
 	}
 	if(linkid == BRACE_LINK__PAWNSCRIPTPAGE)
 	{
@@ -139,7 +155,14 @@ function brace_redirect(linkid)
 
 	if(linkid == BRACE_LINK__PP)
 	{
-		window.location.href = BRACE_PRIVACYPOLICY_HTML;
+		if(user_utils.isMobile())
+		{
+			window.location.href = MOBILE_ELEMENTS.BRACE_PRIVACYPOLICY_HTML();
+		}
+		if(user_utils.isMobile() == false)
+		{
+			window.location.href = BRACE_PRIVACYPOLICY_HTML;
+		}
 	}
 }
 
