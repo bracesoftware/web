@@ -42,8 +42,10 @@ function openModal__()
 }
 
 // Kada korisnik klikne bilo gde van modala, zatvori modal
-window.onclick = function(event) {
-	if (event.target == modal) {
+window.onclick = function(event)
+{
+	if(modal_interaction_allowed) if(event.target == modal)
+	{
 		closeModal();
 	}
 }

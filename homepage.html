@@ -63,22 +63,59 @@ the Initial Developer. All Rights Reserved.
 					<headerbutton id="headerbutton_more2" onclick="openDropdown('headerbutton_more2','mydropdown2')">MORE &#8595;</headerbutton>
 					<div class="dropdown" id="mydropdown2">
 						<headerbutton onclick="openModal('ContactInfo')">CONTACT</headerbutton>
+						<headerbutton onclick="handleAccountRequest()">LOGIN</headerbutton>
 						<headerbutton id="headerbutton_refresh" onclick="brace_redirect(BRACE_LINK__HOMEPAGE)">&#8635; REFRESH</headerbutton>
-					</div>
-				</div>
-
-				<div id="ContactInfo" class="modal">
-					<div class="modal-content">
-						<img class="apply_border_radius" src="brace_slogan.png">
-						<span class="close" onclick="closeModal()">&times;</span>
-						<h2>Contact Mail</h2>
-						<p>Contact us via mail at <code>bracetm.official@gmail.com</code>.</p>
 					</div>
 				</div>
 
 			</ul><!--HEADER-->
 		</nav>
 	</header>
+
+	<div id="ContactInfo" class="modal">
+		<div class="modal-content">
+			<img class="apply_border_radius" src="brace_slogan.png">
+			<span class="close" onclick="closeModal()">&times;</span>
+			<h2>Contact Mail</h2>
+			<p>Contact us via mail at <code>bracetm.official@gmail.com</code>.</p>
+		</div>
+	</div>
+	<div id="AlreadyLoggedIn" class="modal">
+		<div class="modal-content">
+			<span class="close" onclick="closeModal()">&times;</span>
+			<h2>Logged In!</h2>
+			<p>You are already logged in as: <code id="display_username"></code></p>
+			<headerbutton id="account_proceed_btn" onclick="AccountLogOut()">LOG OUT</headerbutton>
+		</div>
+	</div>
+	<div id="sucLogin" class="modal">
+		<div class="modal-content">
+			<span class="close" onclick="closeModal()">&times;</span>
+			<h2>Logged In!</h2>
+			<p>You successfully have logged in!</p>
+		</div>
+	</div>
+	<div id="LoggedOut" class="modal">
+		<div class="modal-content">
+			<span class="close" onclick="closeModal()">&times;</span>
+			<h2>Logged Out!</h2>
+			<p>You successfully have logged out!</p>
+		</div>
+	</div>
+	<div id="AccountPage" class="modal">
+		<div class="modal-content">
+			<img class="apply_border_radius" src="brace_slogan.png">
+			<span class="close" onclick="closeModal()">&times;</span>
+			<h2>Login or Sign Up</h2>
+			<p>Please input your credentials down below:</p>
+			<input type="text" placeholder="Username:" id="data_username">
+			<input type="text" placeholder="Password:" id="data_password">
+			<p id="account_popup_warntext"><p>
+			<headerbutton onclick="closeModal()">CANCEL</headerbutton>
+			<headerbutton id="account_proceed_btn" onclick="AccountLogin()">PROCEED</headerbutton>
+		</div>
+	</div>
+
 
 	<section id="home">
 		<img id="headerbutton_home_" class="apply_border_radius" src="brace_slogan.png" alt="BRACE Slogan">
@@ -175,5 +212,6 @@ the Initial Developer. All Rights Reserved.
 		<headerbutton onclick="brace_redirect(BRACE_LINK__TT)">TikTok</headerbutton>
 	</footer>
 	<script src="popup_impl.js"></script>
+	<script src="account.js"></script>
 </body>
 </html>
