@@ -22,23 +22,25 @@ the Initial Developer. All Rights Reserved.
 
 // Dohvati modal
 let modal = document.getElementById("myModal");
-let previous_modal = null;
-let modal_opened = false;
-let modal_interaction_allowed = false;
+
+let dynamicModalList = [
+	"1","2"
+];
+
+let modal_interaction_allowed = true;
 function openModal(modalid)
 {
+	//closeAllModals();
+	if(dropdown != null)
+	{
+		dropdown.classList.remove('show');
+	}
 	modal = document.getElementById(modalid);
 	modal_interaction_allowed = false;
-	openModal__();
-	setTimeout(updateModalInteraction,10);
-}
-
-// Kada korisnik klikne na dugme, otvori modal
-function openModal__() 
-{
-	modal_opened = true;
+	dynamicModalList.push(modalid);
 	modal.style.display = "block";
 	modal.classList.add("fade-in");
+	setTimeout(updateModalInteraction,100);
 }
 
 // Kada korisnik klikne bilo gde van modala, zatvori modal
@@ -51,41 +53,51 @@ window.onclick = function(event)
 }
 
 // Funkcija za zatvaranje modala sa animacijom
-function closeModal() {
-	previous_modal = modal;
-	modal_opened = false;
+function closeModal() 
+{
 	modal.classList.remove("fade-in");
 	modal.classList.add("fade-out");
-	modal.addEventListener("animationend", function() {
+	modal.addEventListener("animationend", function()
+	{
 		modal.style.display = "none";
 		modal.classList.remove("fade-out");
-	}, { once: true });
+	}, 
+	{
+		once: true 
+	});
 }
 
-function closePreviousModal()
-{
-	previous_modal.classList.remove("fade-in");
-	previous_modal.classList.add("fade-out");
-	previous_modal.addEventListener("animationend", function() {
-		previous_modal.style.display = "none";
-		previous_modal.classList.remove("fade-out");
-	}, { once: true });
-}
 
 let header = document.getElementById('page_header');
 header.addEventListener('click', function()
 {
-	if(modal_opened == true && modal_interaction_allowed)
+	if(modal_interaction_allowed)
 	{
 		closeModal();
-		if(previous_modal != null)
-		{
-			closePreviousModal();
-		}
-
 	}
 });
 
 function updateModalInteraction(){
 	modal_interaction_allowed = true;
+}
+/***************/
+function closeAllModals()
+{
+	for (let i = 0; i < dynamicModalList.length; i++)
+	{
+		if(document.getElementById(dynamicModalList[i])==null)
+		{
+			continue;
+		}
+		document.getElementById(dynamicModalList[i]).classList.remove("fade-in");
+		document.getElementById(dynamicModalList[i]).classList.add("fade-out");
+		document.getElementById(dynamicModalList[i]).addEventListener("animationend", function()
+		{
+			document.getElementById(dynamicModalList[i]).style.display = "none";
+			document.getElementById(dynamicModalList[i]).classList.remove("fade-out");
+		}, 
+		{
+			once: true 
+		});
+	}
 }
