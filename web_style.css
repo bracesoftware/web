@@ -210,6 +210,15 @@ section {
 	text-align: right;
 }
 
+.newasm_bkg{
+	background-image: url("visual_resources/brace_homebkg_3.png");
+	background-color: var(--green_color); /* green color */
+	background-size: cover;
+	color: white;
+	text-align: right;
+	margin-top: 100px;
+}
+
 #home .home_text{
 	text-align: left;
 }
@@ -222,7 +231,7 @@ section {
 	text-align: right;
 }
 
-#about, #services, #privacy_policy,#PawnScript, #DamnLarper, #__slideshow, #default_box {
+#about, #services, #privacy_policy,#PawnScript, #NewASM,#DamnLarper, #__slideshow, #default_box {
 	background-color: #333;
 	margin-left: 250px;
 	margin-right: 250px;
@@ -255,6 +264,12 @@ section {
 
 #DamnLarper {
 	background-image: url("visual_resources/brace_dlimage1.png");
+	background-position: right;
+	background-size: cover;
+}
+
+#NewASM {
+	background-image: url("visual_resources/brace_naimage1.png");
 	background-position: right;
 	background-size: cover;
 }

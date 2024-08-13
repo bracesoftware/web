@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
-	console.log("Website loaded");
+	//console.log("Website loaded");
+	user_utils.consoleOutput("Website loaded.");
 });
 /*
 
@@ -27,6 +28,7 @@ the Initial Developer. All Rights Reserved.
 const PAGE_BRACE_HOMEPAGE = 0;
 const PAGE_PAWNSCRIPT_PAGE = 1;
 const PAGE_DAMNLARPER_PAGE = 2;
+const PAGE_NEWASM_PAGE = 3;
 
 let current_page = -1;
 
@@ -49,6 +51,10 @@ const BRACE_LINK__PAWNSCRIPTBUTTON = 13;
 const BRACE_LINK__DAMNLARPERBUTTON = 14;
 
 const BRACE_LINK__PP = 15;
+const BRACE_LINK__NEWASMBUTTON = 16;
+
+const BRACE_LINK__NEWASM = 17;
+const BRACE_LINK__NAPAGE = 18;
 
 //AboutUs
 const BRACE_DC_LINK = "https://discord.gg/wjxKdRDuUU";
@@ -60,10 +66,14 @@ const BRACE_PS_DW = "https://github.com/bracesoftware/pawnscript/releases";
 //Damn Larper
 const BRACE_DL_DW = "https://github.com/bracesoftware/damnlarper/releases";
 
+//New-ASM
+const BRACE_NA_DW = "https://github.com/bracesoftware/newasm/releases";
+
 //Files
 const BRACE_HOMEPAGE_HTML = "homepage.html";
 const BRACE_PAWNSCRIPT_HTML = "pawnscript.html";
 const BRACE_DAMNLARPER_HTML = "damnlarper.html";
+const BRACE_NEWASM_HTML = "newasm.html";
 const BRACE_PRIVACYPOLICY_HTML = "privacy_policy.html";
 
 let MOBILE_ELEMENTS = {
@@ -152,6 +162,10 @@ function brace_redirect(linkid)
 	{
 		window.location.href = "#DamnLarper";
 	}
+	if(linkid == BRACE_LINK__NEWASMBUTTON)
+	{
+		window.location.href = "#NewASM";
+	}
 
 	if(linkid == BRACE_LINK__PP)
 	{
@@ -163,6 +177,15 @@ function brace_redirect(linkid)
 		{
 			window.location.href = BRACE_PRIVACYPOLICY_HTML;
 		}
+	}
+
+	if(linkid == BRACE_LINK__NEWASM)
+	{
+		window.location.href = BRACE_NA_DW;
+	}
+	if(linkid == BRACE_LINK__NAPAGE)
+	{
+		window.location.href = BRACE_NEWASM_HTML;
 	}
 }
 

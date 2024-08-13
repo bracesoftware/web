@@ -1,0 +1,107 @@
+<!--
+
+The ORIGINAL CODE is the `BRACE WEBSITE` Source Code.
+The INITIAL DEVELOPER is Brace Inc., DEntisT.
+
+Version: MPL 1.1
+
+The contents of this file are subject to the Mozilla Public License Version 
+1.1 the "License"; you may not use this file except in compliance with 
+the License. You may obtain a copy of the License at 
+http://www.mozilla.org/MPL/
+
+Software distributed under the License is distributed on an "AS IS" basis,
+WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+for the specific language governing rights and limitations under the
+License.
+
+Portions created by the Initial Developer are Copyright (c) 2022
+the Initial Developer. All Rights Reserved.
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="icon" href="brace_logo.png" type="image/icon type">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>New-ASM | Brace&#8482; Co.</title>
+
+	<link rel="stylesheet" href="web_style.css">
+	<script src="user_utils.js"></script>
+	<script src="main_script.js"></script>
+	<script src="dropdown_impl.js"></script>
+	<script>
+		console.log("newasm.html: script element called.")
+		current_page = PAGE_NEWASM_PAGE;
+	</script>
+</head>
+<body>
+	<div id="loader-wrapper">
+		<div id="loader"></div>
+	</div>
+	<header id="page_header">
+		<div class="logo">
+			<img class="apply_border_radius" src="brace_webpic.png" alt="BRACE Logo">
+		</div>
+		<nav>
+			<ul><!--HEADER-->
+				<div class="dropdown_container">
+					<headerbutton id="headerbutton_refresh" onclick="brace_redirect(BRACE_LINK__HOMEPAGE)">GO BACK</headerbutton>
+				</div>
+				<div class="dropdown_container">
+					<headerbutton id="newasmhdsd9874398743" onclick="openDropdown('newasmhdsd9874398743','newasm8294372387')">MORE &#8595;</headerbutton>
+					<div class="dropdown" id="newasm8294372387">
+						<headerbutton onclick="openModal('newasm83')">CONTACT</headerbutton>
+					</div>
+				</div>
+
+			</ul><!--HEADER-->
+		</nav>
+	</header>
+
+	<div id="newasm83" class="modal">
+		<div class="modal-content">
+			<img class="apply_border_radius" src="brace_slogan.png">
+			<span class="close" onclick="closeModal()">&times;</span>
+			<h2>Contact Mail</h2>
+			<p>Contact us via mail at <code>bracetm.official@gmail.com</code>.</p>
+		</div>
+	</div>
+
+	<section class="newasm_bkg">
+		<img class="apply_border_radius" height="400" src="visual_resources/newasm_logo.png" alt="BRACE Slogan">
+	</section>
+	
+	<!-- ------------------- -->
+	<!-- NewASM -->
+	<!-- ------------------- -->
+	<section id="NewASM">
+		<img class="apply_border_radius" width="100" src="visual_resources/newasm_logo.png" alt="New-ASM Logo"> <img class="apply_border_radius" width="300" src="visual_resources/brace_newasm.png" alt="BRACE Logo">
+		<ul>
+			<li>New-ASM is an interpreted language written in C++ that mimics assembly language, which somehow makes it a portable version of assembly.</li>
+		</ul>
+		<h1><u>Documentation</u></h1>
+		<h3>Getting Started</h3>
+		<iframe src="text_resources/newasm_code_example1.txt" width="1000" height="200"></iframe>
+		<hr>
+		What are you waiting for?
+		<button class="normalbutton" onclick="brace_redirect(BRACE_LINK__NEWASM)">Download Now</button>
+	</section>
+	<!-- ------------------- -->
+	<!-- FOOTER -->
+	<!-- ------------------- -->
+	<footer>
+		<img class="apply_border_radius" src="brace_tinylogo.png">
+		<p><b>&copy; 2024 Brace&#8482; Co.</b> All rights reserved.</p>
+		<headerbutton onclick="brace_redirect(BRACE_LINK__PP)">PRIVACY POLICY</headerbutton>
+		<headerbutton onclick="brace_redirect(BRACE_LINK__GITHUB)"><code>GitHub</code></headerbutton>
+		<headerbutton onclick="brace_redirect(BRACE_LINK__DISCORD)">Discord</headerbutton>
+		<headerbutton onclick="brace_redirect(BRACE_LINK__IG)">Instagram</headerbutton>
+		<headerbutton onclick="brace_redirect(BRACE_LINK__YT)">YouTube</headerbutton>
+		<headerbutton onclick="brace_redirect(BRACE_LINK__TT)">TikTok</headerbutton>
+	</footer>
+	<script src="popup_impl.js"></script>
+</body>
+</html>
