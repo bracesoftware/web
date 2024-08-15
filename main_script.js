@@ -351,3 +351,11 @@ document.addEventListener("DOMContentLoaded", function() {
 		}
 	}
 });
+
+document.querySelectorAll('headerbutton').forEach(button => {
+    button.addEventListener('click', function() {
+        setTimeout(() => {
+            this.style.outline = 'none';
+        }, 1000); // 1000 milisekundi = 1 sekunda
+    });
+});
