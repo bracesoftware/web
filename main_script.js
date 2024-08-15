@@ -93,100 +93,103 @@ const BRACE_TIKTOK_LINK = "https://www.tiktok.com/@bracesoftware";
 //funcs
 function brace_redirect(linkid)
 {
-	if(linkid == BRACE_LINK__DISCORD)
+	setTimeout(function()
 	{
-		window.open(BRACE_DC_LINK,'_blank');
-	}
-	if(linkid == BRACE_LINK__GITHUB)
-	{
-		window.open(BRACE_GITHUB_LINK,'_blank');
-	}
-	if(linkid == BRACE_LINK__PAWNSCRIPT)
-	{
-		window.open(BRACE_PS_DW,'_blank');
-	}
-	if(linkid == BRACE_LINK__DAMNLARPER)
-	{
-		window.open(BRACE_DL_DW,'_blank');
-	}
-	if(linkid == BRACE_LINK__IG)
-	{
-		window.open(BRACE_INSTAGRAM_LINK,'_blank');
-	}
-	if(linkid == BRACE_LINK__YT)
-	{
-		window.open(BRACE_YOUTUBE_LINK,'_blank');
-	}
-	if(linkid == BRACE_LINK__TT)
-	{
-		window.open(BRACE_TIKTOK_LINK,'_blank');
-	}
-
-	if(linkid == BRACE_LINK__HOMEPAGE)
-	{
-		if(user_utils.isMobile())
+		if(linkid == BRACE_LINK__DISCORD)
 		{
-			window.location.href = MOBILE_ELEMENTS.BRACE_HOMEPAGE_HTML();
+			window.open(BRACE_DC_LINK,'_blank');
 		}
-		if(user_utils.isMobile() == false)
+		if(linkid == BRACE_LINK__GITHUB)
 		{
-			window.location.href = BRACE_HOMEPAGE_HTML;
+			window.open(BRACE_GITHUB_LINK,'_blank');
 		}
-	}
-	if(linkid == BRACE_LINK__PAWNSCRIPTPAGE)
-	{
-		window.location.href = BRACE_PAWNSCRIPT_HTML;
-	}
-	if(linkid == BRACE_LINK__DLPAGE)
-	{
-		window.location.href = BRACE_DAMNLARPER_HTML;
-	}
-
-	if(linkid == BRACE_LINK__HOMEBUTTON)
-	{
-		window.location.href = "#home";
-	}
-	if(linkid == BRACE_LINK__ABOUTUSBUTTON)
-	{
-		window.location.href = "#about";
-	}
-	if(linkid == BRACE_LINK__SERVICESBUTTON)
-	{
-		window.location.href = "#services";
-	}
-	if(linkid == BRACE_LINK__PAWNSCRIPTBUTTON)
-	{
-		window.location.href = "#PawnScript";
-	}
-	if(linkid == BRACE_LINK__DAMNLARPERBUTTON)
-	{
-		window.location.href = "#DamnLarper";
-	}
-	if(linkid == BRACE_LINK__NEWASMBUTTON)
-	{
-		window.location.href = "#NewASM";
-	}
-
-	if(linkid == BRACE_LINK__PP)
-	{
-		if(user_utils.isMobile())
+		if(linkid == BRACE_LINK__PAWNSCRIPT)
 		{
-			window.location.href = MOBILE_ELEMENTS.BRACE_PRIVACYPOLICY_HTML();
+			window.open(BRACE_PS_DW,'_blank');
 		}
-		if(user_utils.isMobile() == false)
+		if(linkid == BRACE_LINK__DAMNLARPER)
 		{
-			window.location.href = BRACE_PRIVACYPOLICY_HTML;
+			window.open(BRACE_DL_DW,'_blank');
 		}
-	}
+		if(linkid == BRACE_LINK__IG)
+		{
+			window.open(BRACE_INSTAGRAM_LINK,'_blank');
+		}
+		if(linkid == BRACE_LINK__YT)
+		{
+			window.open(BRACE_YOUTUBE_LINK,'_blank');
+		}
+		if(linkid == BRACE_LINK__TT)
+		{
+			window.open(BRACE_TIKTOK_LINK,'_blank');
+		}
 
-	if(linkid == BRACE_LINK__NEWASM)
-	{
-		window.location.href = BRACE_NA_DW;
-	}
-	if(linkid == BRACE_LINK__NAPAGE)
-	{
-		window.location.href = BRACE_NEWASM_HTML;
-	}
+		if(linkid == BRACE_LINK__HOMEPAGE)
+		{
+			if(user_utils.isMobile())
+			{
+				window.location.href = MOBILE_ELEMENTS.BRACE_HOMEPAGE_HTML();
+			}
+			if(user_utils.isMobile() == false)
+			{
+				window.location.href = BRACE_HOMEPAGE_HTML;
+			}
+		}
+		if(linkid == BRACE_LINK__PAWNSCRIPTPAGE)
+		{
+			window.location.href = BRACE_PAWNSCRIPT_HTML;
+		}
+		if(linkid == BRACE_LINK__DLPAGE)
+		{
+			window.location.href = BRACE_DAMNLARPER_HTML;
+		}
+
+		if(linkid == BRACE_LINK__HOMEBUTTON)
+		{
+			window.location.href = "#home";
+		}
+		if(linkid == BRACE_LINK__ABOUTUSBUTTON)
+		{
+			window.location.href = "#about";
+		}
+		if(linkid == BRACE_LINK__SERVICESBUTTON)
+		{
+			window.location.href = "#services";
+		}
+		if(linkid == BRACE_LINK__PAWNSCRIPTBUTTON)
+		{
+			window.location.href = "#PawnScript";
+		}
+		if(linkid == BRACE_LINK__DAMNLARPERBUTTON)
+		{
+			window.location.href = "#DamnLarper";
+		}
+		if(linkid == BRACE_LINK__NEWASMBUTTON)
+		{
+			window.location.href = "#NewASM";
+		}
+
+		if(linkid == BRACE_LINK__PP)
+		{
+			if(user_utils.isMobile())
+			{
+				window.location.href = MOBILE_ELEMENTS.BRACE_PRIVACYPOLICY_HTML();
+			}
+			if(user_utils.isMobile() == false)
+			{
+				window.location.href = BRACE_PRIVACYPOLICY_HTML;
+			}
+		}
+
+		if(linkid == BRACE_LINK__NEWASM)
+		{
+			window.location.href = BRACE_NA_DW;
+		}
+		if(linkid == BRACE_LINK__NAPAGE)
+		{
+			window.location.href = BRACE_NEWASM_HTML;
+		}
+	}, 250);
 }
 
 // Slide

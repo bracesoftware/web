@@ -665,6 +665,16 @@ headerbutton {
 	letter-spacing: 1px;
 	padding: 5px 10px;
 }
+
+@keyframes fadeInOutline {
+    0% {
+        outline-color: transparent;
+    }
+    100% {
+        outline-color: var(--bright_green_color);
+    }
+}
+
 headerbutton:after {
 	content: "";
 	position: absolute;
@@ -684,9 +694,8 @@ headerbutton:hover:after {
 }
 headerbutton:active{
 	color: var(--green_color);
-	outline: 2px dotted var(--bright_green_color);
+	/*outline: 2px dotted var(--bright_green_color);*/
 }
-
 headerbutton code:active{
 	color: #fff;
 }
