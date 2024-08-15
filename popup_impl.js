@@ -85,7 +85,7 @@ function closeAllModals()
 {
 	for (let i = 0; i < dynamicModalList.length; i++)
 	{
-		if(document.getElementById(dynamicModalList[i])==null)
+		if(document.getElementById(dynamicModalList[i]) == null)
 		{
 			continue;
 		}
