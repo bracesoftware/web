@@ -93,6 +93,15 @@ const BRACE_TIKTOK_LINK = "https://www.tiktok.com/@bracesoftware";
 //funcs
 function brace_redirect(linkid)
 {
+	if(linkid == BRACE_LINK__NAPAGE ||
+		linkid == BRACE_LINK__PP ||
+		linkid == BRACE_LINK__DLPAGE ||
+		linkid == BRACE_LINK__PAWNSCRIPTPAGE ||
+		linkid == BRACE_LINK__HOMEPAGE
+	){
+		document.getElementById("fade-block").style.animation = "FadeAnimStart 0.25s forwards";
+		document.getElementById("fade-block").style.zIndex = "100000";
+	}
 	setTimeout(function()
 	{
 		if(linkid == BRACE_LINK__DISCORD)

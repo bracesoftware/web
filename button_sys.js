@@ -30,7 +30,11 @@ document.addEventListener("DOMContentLoaded", function(){
 
             setTimeout(function() {
                 button.style.outline = "none";
-                button.style.animation = "none";
+                //button.style.animation = "none";
+                button.style.animation = "fadeOutOutline 0.3s forwards";
+                setTimeout(function() {
+                    button.style.animation = "none";
+                }, 300);
             }, 500);
         });
     });

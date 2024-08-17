@@ -675,6 +675,15 @@ headerbutton {
     }
 }
 
+@keyframes fadeOutOutline{
+	0% {
+		outline-color: var(--bright_green_color);
+	}
+	100% {
+		outline-color: transparent;
+	}
+}
+
 headerbutton:after {
 	content: "";
 	position: absolute;
@@ -719,4 +728,27 @@ headerbutton code:active{
 
 #privacy_policy li{
 	margin-left: 60px;
+}
+
+/****************/
+
+#fade-block {
+	position: fixed;
+	display: block;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	background-color: transparent;
+}
+
+@keyframes FadeAnimStart{
+	0% {
+		background-color: transparent;
+	}
+	100% {
+		background-color: #333;
+	}
 }
