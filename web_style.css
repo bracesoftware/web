@@ -85,7 +85,7 @@ input {
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
-	font-size: 20px;
+	font-size: 13px;
 	background-color: rgba(0, 0, 0, 0.5);
 	color: white;
 	border: none;
@@ -356,20 +356,18 @@ other-button {
 	outline: none;
 	cursor: pointer;
 	padding: 1px 1px;
-	font-size: 10px;
+	margin: 7px;
+	font-size: 1px;
 	font-weight: normal;
 	font-family: Verdana, sans-serif;
-	border-radius: 5px; /* Zaobljeni uglovi */
-	color: #fff; /* Boja teksta */
-	transition: background-color 0.3s ease; /* Tranzicija za boju pozadine */
-	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Senka dugmeta */
+	border-radius: 5px;
+	color: var(--subtext_color); 
+	transition: background-color 0.3s ease; 
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 }
 
 other-button:hover {
-	background-color: var(--green_color);
-}
-other-button:active {
-	background-color: #333;
+	color: #fff;
 }
 
 .apply_border_radius{

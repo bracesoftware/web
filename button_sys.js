@@ -21,7 +21,7 @@ the Initial Developer. All Rights Reserved.
 */
 
 document.addEventListener("DOMContentLoaded", function(){
-    let buttons = document.querySelectorAll("headerbutton");
+    let buttons = document.querySelectorAll("headerbutton,other-button");
 
     buttons.forEach(button => {
         button.addEventListener("click", function(){
