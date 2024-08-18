@@ -752,3 +752,29 @@ headerbutton code:active{
 		background-color: #333;
 	}
 }
+
+/*****************************/
+
+.img_text_container {
+    display: flex;
+    align-items: center; 
+}
+
+.img_text_container-image {
+    margin-right: 39px; 
+	margin-left: 50px;
+	margin-top: 40px;
+    width: 150px;
+    height: auto;
+}
+
+.img_text_container-image-manual {
+    margin-right: 39px;
+	margin-top: 40px;
+	margin-left: 50px;
+    height: auto;
+}
+
+.img_text_container-text {
+    font-size: 16px;
+}

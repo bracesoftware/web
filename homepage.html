@@ -131,26 +131,31 @@ the Initial Developer. All Rights Reserved.
 	<!-- ------------------- -->
 	<section id="about">
 		<img id="headerbutton_about_" class="apply_border_radius" width="300" src="visual_resources/brace_aboutus.png" alt="BRACE Logo">
-		<p>Brace&#8482; Co. is a small IT company dedicated to making information technology fun and interesting to newbies and future generations.</p>
-		<li>Interested in contribution, development or whatsoever? Click those buttons down there!</li>
-		<p>All of the official products of the Brace™ team are licensed with Mozilla Public License. We're fully open source!</p>
+		
 
-		<div class="slideshow-container">
-			<div class="slide">
-				<img src="visual_resources/brace_slide1.png">
+		<div class="img_text_container">
+			<div class="slideshow-container img_text_container-image-manual">
+				<div class="slide">
+					<img src="visual_resources/brace_slide1.png">
+				</div>
+				<div class="slide">
+					<img src="visual_resources/brace_slide2.png">
+				</div>
+				<div class="slide">
+					<img src="visual_resources/brace_slide3.png">
+				</div>
+				<div class="slide">
+					<img src="visual_resources/brace_slide4.png">
+				</div>
+	
+				<other-button class="prev" onclick="changeSlide(-1)">Prev</other-button>
+				<other-button class="next" onclick="changeSlide(1)">Next</other-button>
 			</div>
-			<div class="slide">
-				<img src="visual_resources/brace_slide2.png">
-			</div>
-			<div class="slide">
-				<img src="visual_resources/brace_slide3.png">
-			</div>
-			<div class="slide">
-				<img src="visual_resources/brace_slide4.png">
-			</div>
-
-			<other-button class="prev" onclick="changeSlide(-1)">Prev</other-button>
-			<other-button class="next" onclick="changeSlide(1)">Next</other-button>
+			<ul class="img_text_container-text">
+				<li>Brace&#8482; Co. is a small IT company dedicated to making information technology fun and interesting to newbies and future generations.</li>
+				<li>Interested in contribution, development or whatsoever? Click those buttons down there!</li>
+				<li>All of the official products of the Brace™ team are licensed with Mozilla Public License. We're fully open source!</li>
+			</ul>
 		</div>
 	</section>
 	<!-- ------------------- -->
@@ -169,38 +174,53 @@ the Initial Developer. All Rights Reserved.
 	<!-- PawnScript -->
 	<!-- ------------------- -->
 	<section id="PawnScript">
-		<img id="headerbutton_more_" class="apply_border_radius" width="30" src="visual_resources/pawnscript_logo.png" alt="PS Logo"> <img class="apply_border_radius" width="300" src="visual_resources/brace_pawnscript.png" alt="BRACE Logo">
-		<ul>
-			<li>PawnScript is a small interpreted semi-statically-typed object-oriented (and really memory-consuming) language written in Pawn and thus it is its extension (similar to C/C++ or Java/JavaScript). It is designed with the role of enabling modification of the gamemode code on the server during run-time.</li>
-			<li>It contains various features and things that aren't even introduced into Pawn itself. PawnScript has a very complex syntax which makes it very hard to learn but also fragile to small mistakes.</li>
-		</ul>
-		<button class="normalbutton" onclick="brace_redirect(BRACE_LINK__PAWNSCRIPT)">Download Now</button>
-		<button class="normalbutton" onclick="brace_redirect(BRACE_LINK__PAWNSCRIPTPAGE)">Learn more</button>
+		<div class="img_text_container">
+			<img id="headerbutton_more_" class="apply_border_radius img_text_container-image-manual" width="100" src="visual_resources/pawnscript_logo.png" alt="PS Logo">
+			<ul class="img_text_container-text">
+				<li>PawnScript is a small interpreted semi-statically-typed object-oriented (and really memory-consuming) language written in Pawn and thus it is its extension (similar to C/C++ or Java/JavaScript). It is designed with the role of enabling modification of the gamemode code on the server during run-time.</li>
+				<li>It contains various features and things that aren't even introduced into Pawn itself. PawnScript has a very complex syntax which makes it very hard to learn but also fragile to small mistakes.</li>
+			</ul>
+		</div>
+		<div style="text-align: right; margin-right: 50px;">
+			<button class="normalbutton" onclick="brace_redirect(BRACE_LINK__PAWNSCRIPT)">Download Now</button>
+			<button class="normalbutton" onclick="brace_redirect(BRACE_LINK__PAWNSCRIPTPAGE)">Learn more</button>
+		</div>
 	</section>
 	<!-- ------------------- -->
 	<!-- DamnLarper -->
 	<!-- ------------------- -->
 	<section id="DamnLarper">
-		<img class="apply_border_radius" width="100" src="visual_resources/damnlarper_logo.png" alt="DL Logo"> <img class="apply_border_radius" width="300" src="visual_resources/brace_damnlarper.png" alt="BRACE Logo">
-		<ul>
-			<li>Damn Larper is a multipurpose bot with many commands and features. It is basically a text-based game right in your server! This bot has a verification system, which is not allowing the unverified to send messages until they verify themselves. Besides verification, there are also moderation commands such as ban and kick commands.</li>
-			<li>In case you're searching for a fun bot, there are categories of commands for economy, custom text commands, miscellaneous commands, levelling system, bump system in development, list system with which you can make your own list and for example write down your chores on them.</li>
-			<li>And it's not over yet, you can basically take care of your virtual pet! You can get one at a petshop (it helps you gain sweet bonuses on economy commands!). There's also roleplaying, where you can buy items, craft items, go mining, hunting, fishing and chopping wood - in basic terms, get resources and be a boss (there are command cooldowns though, get premium to avoid them!).</li>
-			<li>You can also unlock achievements and get spectacular rewards once you complete them! Regarding to server security, there is a anti-raid and security system which is customizeable! There is also social media-like system where you can post messages and view them on a global feed. More features are waiting you once you add Damn Larper to your server!</li>
-		</ul>
-		<button class="normalbutton" onclick="brace_redirect(BRACE_LINK__DAMNLARPER)">Check Out</button>
-		<button class="normalbutton" onclick="brace_redirect(BRACE_LINK__DLPAGE)">Learn more</button>
+		<div class="img_text_container">
+			<img class="apply_border_radius img_text_container-image-manual" width="300" src="visual_resources/damnlarper_logo.png" alt="DL Logo"> 
+			<ul class="img_text_container-text">
+				<li>Damn Larper is a multipurpose bot with many commands and features. It is basically a text-based game right in your server! This bot has a verification system, which is not allowing the unverified to send messages until they verify themselves. Besides verification, there are also moderation commands such as ban and kick commands.</li>
+				<li>In case you're searching for a fun bot, there are categories of commands for economy, custom text commands, miscellaneous commands, levelling system, bump system in development, list system with which you can make your own list and for example write down your chores on them.</li>
+				<li>And it's not over yet, you can basically take care of your virtual pet! You can get one at a petshop (it helps you gain sweet bonuses on economy commands!). There's also roleplaying, where you can buy items, craft items, go mining, hunting, fishing and chopping wood - in basic terms, get resources and be a boss (there are command cooldowns though, get premium to avoid them!).</li>
+				<li>You can also unlock achievements and get spectacular rewards once you complete them! Regarding to server security, there is a anti-raid and security system which is customizeable! There is also social media-like system where you can post messages and view them on a global feed. More features are waiting you once you add Damn Larper to your server!</li>
+			</ul>
+		</div>
+		<div style="text-align: right; margin-right: 50px;">
+			<button class="normalbutton" onclick="brace_redirect(BRACE_LINK__DAMNLARPER)">Check Out</button>
+			<button class="normalbutton" onclick="brace_redirect(BRACE_LINK__DLPAGE)">Learn more</button>
+		</div>
 	</section>
 	<!-- ------------------- -->
 	<!-- New-ASM -->
 	<!-- ------------------- -->
 	<section id="NewASM">
-		<img class="apply_border_radius" width="100" src="visual_resources/newasm_logo.png" alt="DL Logo"> <img class="apply_border_radius" width="300" src="visual_resources/brace_newasm.png" alt="BRACE Logo">
-		<ul>
-			<li>New-ASM is an interpreted language written in C++ that mimics assembly language, which somehow makes it a portable version of assembly.</li>
-		</ul>
-		<button class="normalbutton" onclick="brace_redirect(BRACE_LINK__NEWASM)">Check Out</button>
-		<button class="normalbutton" onclick="brace_redirect(BRACE_LINK__NAPAGE)">Learn more</button>
+		<div class="img_text_container">
+			<img src="visual_resources/newasm_logo.png" alt="IMAGE" class="apply_border_radius img_text_container-image">
+
+			<ul class="img_text_container-text">
+				<li>New-ASM is an interpreted language written in C++ that mimics assembly language, which somehow makes it a portable version of assembly.</li>
+				
+			</ul>
+		</div>
+		
+		<div style="text-align: right; margin-right: 50px;">
+			<button class="normalbutton" onclick="brace_redirect(BRACE_LINK__NEWASM)">Check Out</button>
+			<button class="normalbutton" onclick="brace_redirect(BRACE_LINK__NAPAGE)">Learn more</button>
+		</div>
 	</section>
 	<!-- ------------------- -->
 	<!-- TESTING -->
