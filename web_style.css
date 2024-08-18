@@ -301,19 +301,19 @@ footer p {
 
 /* Resetujemo stilizaciju za dugme */
 .normalbutton {
-	border: 2px solid;
+	border: 1px solid;
 	border-color: var(--green_color);
 	outline: none;
 	cursor: pointer;
 	padding: 10px 20px;
-	font-size: 16px;
+	font-size: 13px;
 	/*font-weight: bold;*/
 	font-family: Verdana, sans-serif;
-	border-radius: 5px; /* Zaobljeni uglovi */
 	background-color: #333; /* Boja pozadine */
 	color: #fff; /* Boja teksta */
-	transition: background-color 0.3s ease; /* Tranzicija za boju pozadine */
-	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Senka dugmeta */
+	transition: background-color 0.3s ease; 
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+	border-radius: 3px;
 }
 
 /* Promeniti boju pozadine na hover */
