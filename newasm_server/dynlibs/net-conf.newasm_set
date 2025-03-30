@@ -1,0 +1,10 @@
+setup : msg
+	Welcome to netconf!
+setup : dlname
+	netconf
+setup : func
+	mov . tlr , "INTERNET WORKS!"
+	mov . fdx , 1
+	mov . stl , %endl
+	syscall . 0 , %ios
+	zero . stl
