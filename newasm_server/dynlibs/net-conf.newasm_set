@@ -8,3 +8,4 @@
 	mov . stl , %endl
 	syscall . 0 , %ios
 	zero . stl
+	__say . 0 , "HELLO"
