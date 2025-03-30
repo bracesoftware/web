@@ -1,8 +1,8 @@
-setup : msg
+~setup : msg
 	Welcome to netconf!
-setup : dlname
+~setup : dlname
 	netconf
-setup : func
+~setup : impl
 	mov . tlr , "INTERNET WORKS!"
 	mov . fdx , 1
 	mov . stl , %endl
