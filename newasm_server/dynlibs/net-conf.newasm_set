@@ -3,9 +3,9 @@
 ~setup : dlname
 	netconf
 ~setup : impl
-	mov . tlr , "INTERNET WORKS!"
-	mov . fdx , 1
-	mov . stl , %endl
-	syscall . 0 , %ios
-	zero . stl
-	__say . 0 , "HELLO"
+	mov tlr , "INTERNET WORKS!"
+	mov fdx , 1
+	mov stl , %endl
+	syscall 0 , %ios
+	zero stl
+	__say 0 , "HELLO"
