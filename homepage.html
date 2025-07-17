@@ -173,11 +173,29 @@ the Initial Developer. All Rights Reserved.
 	<!-- ------------------- -->
 	<!-- PawnScript -->
 	<!-- ------------------- -->
-	<section id="PawnScript">
+	<section class="asidebox" id="aside-menu-whole">
+		<aside class="aside-options">
+			<headerbutton onclick="aside_update(option_newasm)">NewASM</headerbutton>
+			<headerbutton onclick="aside_update(option_damnlarper)">DamnLarper</headerbutton>
+			<headerbutton onclick="aside_update(option_pawnscript)">PawnScript</headerbutton>
+		</aside>
+		<div class="img_text_container">
+			<img id="aside-image" class="apply_border_radius img_text_container-image-manual" width="100" src="visual_resources/pawnscript_logo.png" alt="PS Logo">
+			<ul class="img_text_container-text">
+				<li id="aside-content">Choose your option.</li>
+			</ul>
+		</div>
+		<div style="text-align: right; margin-right: 50px;">
+			<button id="aside-button-1" class="normalbutton" onclick="brace_redirect(BRACE_LINK__PAWNSCRIPT)">Download Now</button>
+			<button id="aside-button-2" class="normalbutton" onclick="brace_redirect(BRACE_LINK__PAWNSCRIPTPAGE)">Learn more</button>
+		</div>
+	</section>
+	<!-- ------------------- -->
+	<!--<section id="PawnScript">
 		<div class="img_text_container">
 			<img id="headerbutton_more_" class="apply_border_radius img_text_container-image-manual" width="100" src="visual_resources/pawnscript_logo.png" alt="PS Logo">
 			<ul class="img_text_container-text">
-				<li>PawnScript is a small interpreted semi-statically-typed object-oriented (and really memory-consuming) language written in Pawn and thus it is its extension (similar to C/C++ or Java/JavaScript). It is designed with the role of enabling modification of the gamemode code on the server during run-time.</li>
+				<li>PawnScript is a small interpreted semi-statically-typed object-oriented (and really memory-consuming) language written in Pawn and thus it is its extension (similar to C/C++ in terms of functionality or Java/JavaScript in terms of naming). It is designed with the role of enabling modification of the gamemode code on the server during run-time.</li>
 				<li>It contains various features and things that aren't even introduced into Pawn itself. PawnScript has a very complex syntax which makes it very hard to learn but also fragile to small mistakes.</li>
 			</ul>
 		</div>
@@ -185,11 +203,11 @@ the Initial Developer. All Rights Reserved.
 			<button class="normalbutton" onclick="brace_redirect(BRACE_LINK__PAWNSCRIPT)">Download Now</button>
 			<button class="normalbutton" onclick="brace_redirect(BRACE_LINK__PAWNSCRIPTPAGE)">Learn more</button>
 		</div>
-	</section>
+	</section>-->
 	<!-- ------------------- -->
 	<!-- DamnLarper -->
 	<!-- ------------------- -->
-	<section id="DamnLarper">
+	<!--<section id="DamnLarper">
 		<div class="img_text_container">
 			<img class="apply_border_radius img_text_container-image-manual" width="300" src="visual_resources/damnlarper_logo.png" alt="DL Logo"> 
 			<ul class="img_text_container-text">
@@ -203,10 +221,11 @@ the Initial Developer. All Rights Reserved.
 			<button class="normalbutton" onclick="brace_redirect(BRACE_LINK__DAMNLARPER)">Check Out</button>
 			<button class="normalbutton" onclick="brace_redirect(BRACE_LINK__DLPAGE)">Learn more</button>
 		</div>
-	</section>
+	</section>-->
 	<!-- ------------------- -->
 	<!-- New-ASM -->
 	<!-- ------------------- -->
+	<!--
 	<section id="NewASM">
 		<div class="img_text_container">
 			<img src="visual_resources/newasm_logo.png" alt="IMAGE" width="300" class="apply_border_radius img_text_container-image-manual">
@@ -222,6 +241,7 @@ the Initial Developer. All Rights Reserved.
 			<button class="normalbutton" onclick="brace_redirect(BRACE_LINK__NAPAGE)">Learn more</button>
 		</div>
 	</section>
+	-->
 	<!-- ------------------- -->
 	<!-- TESTING -->
 	<!-- ------------------- -->
@@ -249,5 +269,9 @@ the Initial Developer. All Rights Reserved.
 	</footer>
 	<script src="popup_impl.js"></script>
 	<script src="account.js"></script>
+	<script src="aside_menu.js"></script>
+	<script>
+		aside_update(option_newasm);
+	</script>
 </body>
 </html>

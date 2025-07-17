@@ -1,9 +1,9 @@
-_ : data
-    txt $ string = "Hello world"
-_ : start
-    mov . tlr , string
-    mov . fdx , 1
+.data
+    txt string : "Hello world"
+.start
+    mov tlr , string
+    mov fdx , 1
     
-    syscall . 0 , %ios
+    syscall 0 , %ios
 
-    retn . 0 , 0
+    retn 0

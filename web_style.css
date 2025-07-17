@@ -782,3 +782,47 @@ headerbutton code:active{
 .img_text_container-text {
     font-size: 16px;
 }
+/************************************/
+#aside-menu-whole {
+	height: 400px;
+    background-color: #333;
+    margin-left: 250px;
+    margin-right: 250px;
+    color: white;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.5s ease, opacity 0.5s ease, max-height 1.5s ease; /* Animacija za visinu */
+    opacity: 0;  /* Početno nevidljivo */
+    transform: scale(0.95);  /* Početno smanjeno */
+    max-height: 0;  /* Početno visina je 0 */
+}
+
+#aside-menu-whole.show {
+    opacity: 1;  /* Postepeno postaje vidljivo */
+    transform: scale(1);  /* Postepeno se vraća u normalnu veličinu */
+    max-height: 1000px;  /* Postavljamo dovoljno veliku vrednost za max-height */
+    animation: fadeToGray 1s ease forwards;  /* Animacija koja prelazi u sivo i otkriva */
+}
+
+@keyframes fadeToGray {
+    0% {
+        background-color: #333; /* Početna boja */
+        opacity: 1;
+    }
+    50% {
+        background-color: #888; /* Boja postaje siva */
+        opacity: 0.5;
+    }
+    100% {
+        background-color: #333; /* Vraća se u originalnu boju */
+        opacity: 1;
+    }
+}
+
+.aside-options {
+    background-color: #333; /* Pozadinska boja - možete promeniti u bilo koju */
+    border-radius: 10px; /* Zaobljeni uglovi - možete promeniti vrednost */
+    padding: 20px; /* Razmak unutar aside elementa */
+    color: white; /* Boja teksta - možete promeniti u skladu sa potrebama */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Dodavanje senke radi efekta dubine */
+}
