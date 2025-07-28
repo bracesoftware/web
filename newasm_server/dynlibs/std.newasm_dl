@@ -1,0 +1,5 @@
+.start
+mov tlr, "Standard library loaded."
+mov fdx, 1
+sysenter %ios
+syscall
