@@ -1,5 +1,0 @@
-mov tlr , "INTERNETTEST WORKS"
-mov stl , %endl
-mov fdx , 1
-syscall 0 , %ios
-zero stl
