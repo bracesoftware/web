@@ -1,9 +1,15 @@
+.$using %ios
 .data
     txt string : "Hello world"
+    num len : $-string
 .start
-    mov tlr , string
-    mov fdx , 1
-    
-    syscall 0 , %ios
+    mov tlr, string
+    mov stl, 0c1
+    mov fdx, 1
+    mov bos, len
 
-    retn 0
+    sysenter %ios
+    
+    syscall
+
+    ret 0
