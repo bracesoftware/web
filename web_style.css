@@ -784,17 +784,17 @@ headerbutton code:active{
 }
 /************************************/
 #aside-menu-whole {
-	height: 400px;
+	height: auto;
     background-color: #333;
     margin-left: 250px;
     margin-right: 250px;
     color: white;
-    overflow: hidden;
+    overflow: visible;
     position: relative;
     transition: transform 0.5s ease, opacity 0.5s ease, max-height 1.5s ease; /* Animacija za visinu */
     opacity: 0;  /* Početno nevidljivo */
     transform: scale(0.95);  /* Početno smanjeno */
-    max-height: 0;  /* Početno visina je 0 */
+    max-height: 1000px;  /* Početno visina je 0 */
 }
 
 #aside-menu-whole.show {
