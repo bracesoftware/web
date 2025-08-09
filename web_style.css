@@ -668,6 +668,8 @@ headerbutton {
 	font-size: 14px;
 	letter-spacing: 1px;
 	padding: 5px 10px;
+	/*
+	z-index: 1234;*/
 }
 
 @keyframes fadeInOutline {
@@ -837,4 +839,75 @@ headerbutton code:active{
     gap: 8px;                        /* Razmak između dugmadi (opcionalno) */
     padding: 10px;                   /* Unutrašnji razmak */
     scroll-behavior: smooth;         /* Glatko skrolovanje */
+}
+
+/****************************/
+
+
+body {
+    font-family: brace_font, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #2e2e2e;
+    color: white;
+}
+
+/* Pozadinski sloj za oblačiće */
+.background-blobs {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -100;
+    pointer-events: none; /* da klikovi prolaze */
+}
+
+.blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.5;
+    animation: moveBlobs 5s infinite alternate ease-in-out;
+}
+
+.blob.green {
+    background: var(--green_color);
+    width: 400px;
+    height: 400px;
+    top: 20%;
+    left: 10%;
+}
+
+.blob.bright {
+    background: var(--bright_green_color);
+    width: 500px;
+    height: 500px;
+    top: 50%;
+    left: 60%;
+}
+
+/* Animacija oblačića */
+@keyframes moveBlobs {
+    0% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(50px, -30px) scale(1.1); }
+    100% { transform: translate(-30px, 40px) scale(1); }
+}
+
+/* Aero-box */
+.aero-box {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    margin: 100px auto;
+    width: 400px;
+    text-align: center;
+}
+
+.subtext {
+    color: var(--subtext_color);
 }

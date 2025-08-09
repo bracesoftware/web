@@ -24,3 +24,15 @@ document.addEventListener("DOMContentLoaded", function()
 {
     document.getElementById("website-footer").innerHTML = HTML.footer;
 });
+
+
+const bckg_anim = `<div class="background-blobs">
+    <div class="blob green"></div>
+    <div class="blob bright"></div>
+</div>`;
+
+document.addEventListener("DOMContentLoaded", function() {
+	const container = document.createElement('div');
+    container.innerHTML = bckg_anim;
+    document.body.appendChild(container.firstElementChild);
+});

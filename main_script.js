@@ -220,9 +220,12 @@ function showSlide(index)
 {
 	let slides = document.querySelectorAll('.slide');
 	// Provjera da li je index u granicama broja slajdova
-	if (index < 0) {
+	if(index < 0)
+	{
 		index = slides.length - 1; // Povratak na zadnji slajd ako je index manji od 0
-	} else if (index >= slides.length) {
+	}
+	else if(index >= slides.length)
+	{
 		index = 0; // Povratak na prvi slajd ako je index veći ili jednak broju slajdova
 	}
 
