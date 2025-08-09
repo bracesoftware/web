@@ -43,15 +43,28 @@ NewASM is an interpreted low-level programming language which combines explicit 
 
     ret 0
 ~~~
+`,_default_text: `# Welcome!
+Welcome to the NewASM Wiki.
+Press the topic you want to read.
 `
 };
 
+const default_text = 0;
 const getting_started = 1;
 
 function updateWiki(id)
 {
+    let query = document.querySelector("#NewASM #wiki");
+    if(id == default_text)
+    {
+        query.innerHTML = marked.parse(wiki_content._default_text);
+    }
     if(id == getting_started)
     {
-        document.querySelector("#NewASM #wiki").innerHTML = marked.parse(wiki_content._getting_started);
+        query.innerHTML = marked.parse(wiki_content._getting_started);
     }
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+    updateWiki(default_text);
+});
