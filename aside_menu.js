@@ -28,23 +28,41 @@ const aside_button2 = document.getElementById("aside-button-2");
 const asidebox = document.getElementById("aside-menu-whole");
 
 //options
-const option_newasm = 1;
-const option_damnlarper = 2;
-const option_pawnscript = 3;
+const option_newasm = 0;
+const option_damnlarper = 1;
+const option_pawnscript = 2;
 
-function aside_update(option)
+const options_count = 3;
+let option_id = option_newasm;
+
+const content = {
+    newasm_desc: `NewASM is an interpreted low-level programming language which combines explicit memory and register control, giving it a breeze of assembly-like feel, with high-level functionalities such as objects, threads and more.`,
+    damnlarper_desc: `Damn Larper is a multipurpose bot with many commands and features. It is basically a text-based game right in your server! This bot has a verification system, which is not allowing the unverified to send messages until they verify themselves. Besides verification, there are also moderation commands such as ban and kick commands.
+
+In case you're searching for a fun bot, there are categories of commands for economy, custom text commands, miscellaneous commands, levelling system, bump system in development, list system with which you can make your own list and for example write down your chores on them.
+
+And it's not over yet, you can basically take care of your virtual pet! You can get one at a petshop (it helps you gain sweet bonuses on economy commands!). There's also roleplaying, where you can buy items, craft items, go mining, hunting, fishing and chopping wood - in basic terms, get resources and be a boss (there are command cooldowns though, get premium to avoid them!).
+
+You can also unlock achievements and get spectacular rewards once you complete them! Regarding to server security, there is a anti-raid and security system which is customizeable! There is also social media-like system where you can post messages and view them on a global feed. More features are waiting you once you add Damn Larper to your server!`,
+    pawnscript_desc: `PawnScript is a small interpreted semi-statically-typed object-oriented (and really memory-consuming) language written in Pawn and thus it is its extension (similar to C/C++ or Java/JavaScript). It is designed with the role of enabling modification of the gamemode code on the server during run-time. It contains various features and things that aren't even introduced into Pawn itself. PawnScript has a very complex syntax which makes it very hard to learn but also fragile to small mistakes.
+    ` 
+};
+
+function aside_update_(option)
 {
     // Dodajemo klasu koja pokreće animaciju
     asidebox.classList.remove('show');  // Uklonimo klasu pre nego što je ponovo dodamo
     void asidebox.offsetWidth;  // Forsiramo reflow kako bi animacija radila
     asidebox.classList.add('show');  // Ponovo dodajemo klasu za animaciju
 
+    asidebox.background = "transparent";
+
     if(option == option_newasm)
     {
-        asidebox.style.backgroundImage = "url('visual_resources/brace_naimage1.png')"
+        //asidebox.style.backgroundImage = "url('visual_resources/brace_naimage1.png')"
         aside_image.src = "visual_resources/newasm_logo.png";
         aside_image.style.width = "300px";
-        aside_content.textContent = "New-ASM is an interpreted language written in C++ that mimics assembly language, which somehow makes it a portable version of assembly.";
+        aside_content.textContent = content.newasm_desc;
         aside_button1.onclick = function()
         {
             brace_redirect(BRACE_LINK__NEWASM);
@@ -56,15 +74,10 @@ function aside_update(option)
     }
     if(option == option_damnlarper)
     {
-        asidebox.style.backgroundImage = "url('visual_resources/brace_dlimage1.png')"
+        //asidebox.style.backgroundImage = "url('visual_resources/brace_dlimage1.png')"
         aside_image.src = "visual_resources/damnlarper_logo.png";
         aside_image.style.width = "300px";
-        aside_content.textContent = "\
-        Damn Larper is a multipurpose bot with many commands and features. It is basically a text-based game right in your server! This bot has a verification system, which is not allowing the unverified to send messages until they verify themselves. Besides verification, there are also moderation commands such as ban and kick commands.\n\
-        In case you're searching for a fun bot, there are categories of commands for economy, custom text commands, miscellaneous commands, levelling system, bump system in development, list system with which you can make your own list and for example write down your chores on them.\n\
-        And it's not over yet, you can basically take care of your virtual pet! You can get one at a petshop (it helps you gain sweet bonuses on economy commands!). There's also roleplaying, where you can buy items, craft items, go mining, hunting, fishing and chopping wood - in basic terms, get resources and be a boss (there are command cooldowns though, get premium to avoid them!).\n\
-        You can also unlock achievements and get spectacular rewards once you complete them! Regarding to server security, there is a anti-raid and security system which is customizeable! There is also social media-like system where you can post messages and view them on a global feed. More features are waiting you once you add Damn Larper to your server!\n\
-        ";
+        aside_content.textContent = content.damnlarper_desc;
         aside_button1.onclick = function()
         {
             brace_redirect(BRACE_LINK__DAMNLARPER);
@@ -76,10 +89,10 @@ function aside_update(option)
     }
     if(option == option_pawnscript)
     {
-        asidebox.style.backgroundImage = "url('visual_resources/brace_psimage1.png')"
+        //asidebox.style.backgroundImage = "url('visual_resources/brace_psimage1.png')"
         aside_image.src = "visual_resources/pawnscript_logo.png";
         aside_image.style.width = "100px";
-        aside_content.textContent = "PawnScript is a small interpreted semi-statically-typed object-oriented (and really memory-consuming) language written in Pawn and thus it is its extension (similar to C/C++ in terms of functionality or Java/JavaScript in terms of naming). It is designed with the role of enabling modification of the gamemode code on the server during run-time. It contains various features and things that aren't even introduced into Pawn itself. PawnScript has a very complex syntax which makes it very hard to learn but also fragile to small mistakes.";
+        aside_content.textContent = content.pawnscript_desc;
         aside_button1.onclick = function()
         {
             brace_redirect(BRACE_LINK__PAWNSCRIPT);
@@ -91,4 +104,19 @@ function aside_update(option)
     }
 
     //animateHeight(asidebox);
+}
+
+function aside_update(count)
+{
+    option_id += count;
+    if(option_id == options_count)
+    {
+        option_id = 0;
+    }
+    if(option_id == -1)
+    {
+        option_id = options_count - 1;
+    }
+    
+    aside_update_(option_id);
 }

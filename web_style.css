@@ -787,36 +787,20 @@ headerbutton code:active{
 /************************************/
 #aside-menu-whole {
 	height: auto;
-    background-color: #333;
-    margin-left: 250px;
-    margin-right: 250px;
-    color: white;
-    overflow: visible;
-    position: relative;
-    transition: transform 0.5s ease, opacity 0.5s ease, max-height 1.5s ease; /* Animacija za visinu */
-    opacity: 0;  /* Početno nevidljivo */
-    transform: scale(0.95);  /* Početno smanjeno */
-    max-height: 1000px;  /* Početno visina je 0 */
 }
 
 #aside-menu-whole.show {
-    opacity: 1;  /* Postepeno postaje vidljivo */
-    transform: scale(1);  /* Postepeno se vraća u normalnu veličinu */
-    max-height: 1000px;  /* Postavljamo dovoljno veliku vrednost za max-height */
     animation: fadeToGray 1s ease forwards;  /* Animacija koja prelazi u sivo i otkriva */
 }
 
 @keyframes fadeToGray {
     0% {
-        background-color: #333; /* Početna boja */
         opacity: 1;
     }
     50% {
-        background-color: #888; /* Boja postaje siva */
         opacity: 0.5;
     }
     100% {
-        background-color: #333; /* Vraća se u originalnu boju */
         opacity: 1;
     }
 }
@@ -900,14 +884,19 @@ body {
     background: rgba(255, 255, 255, 0.08);
     backdrop-filter: blur(20px) saturate(180%);
     -webkit-backdrop-filter: blur(20px) saturate(180%);
-    border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    /*border: 1px solid rgba(255, 255, 255, 0.2);*/
     padding: 20px;
     margin: 100px auto;
-    width: 400px;
+    width: auto;
     text-align: center;
 }
 
 .subtext {
     color: var(--subtext_color);
+}
+
+/*****************/
+
+.image_transition {
+	animation: fadeIn 0.5s;
 }

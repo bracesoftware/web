@@ -173,25 +173,36 @@ the Initial Developer. All Rights Reserved.
 		</ul>
 	</section>
 	<!-- ------------------- -->
-	<!-- PawnScript -->
+	<!-- Aside meni -->
 	<!-- ------------------- -->
-	<section class="asidebox" id="aside-menu-whole">
-		<aside class="aside-options">
+	
+	<!-- <div class="aside-menu" style="flex: 1; max-width: 200px;">
+			<p>
+				Select:
+			</p>
+			<aside class="aside-options">
 			<headerbutton onclick="aside_update(option_newasm)">NewASM</headerbutton>
 			<headerbutton onclick="aside_update(option_damnlarper)">DamnLarper</headerbutton>
 			<headerbutton onclick="aside_update(option_pawnscript)">PawnScript</headerbutton>
-		</aside>
-		<div class="img_text_container">
-			<img id="aside-image" class="apply_border_radius img_text_container-image-manual" width="100" src="visual_resources/pawnscript_logo.png" alt="PS Logo">
-			<ul class="img_text_container-text">
-				<li id="aside-content">Choose your option.</li>
-			</ul>
+			</aside>
+		</div>  -->
+		
+
+
+	<section class="aero-box" id="aside-menu-whole" style="transition: height 0.5s ease;">
+		<div style="text-align: center;">
+			<button id="aaside-button-1" class="normalbutton" onclick="aside_update(-1)">&larr;</button>
+			<button id="aaside-button-2" class="normalbutton" onclick="aside_update(1)">&rarr;</button>
 		</div>
-		<div style="text-align: right; margin-right: 50px;">
+		<img id="aside-image" class="apply_border_radius image_transition" width="100" src="visual_resources/pawnscript_logo.png" alt="PS Logo" style="margin: 30px;">
+	
+		<p id="aside-content" style="margin: 30px; text-align: center; margin-right: 250px; margin-left: 250px;">Choose your option.</p>
+		<div style="text-align: right; margin-right: 200px;">
 			<button id="aside-button-1" class="normalbutton" onclick="brace_redirect(BRACE_LINK__PAWNSCRIPT)">Download Now</button>
 			<button id="aside-button-2" class="normalbutton" onclick="brace_redirect(BRACE_LINK__PAWNSCRIPTPAGE)">Learn more</button>
 		</div>
 	</section>
+
 	<!-- ------------------- -->
 	<!--<section id="PawnScript">
 		<div class="img_text_container">
