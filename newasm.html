@@ -33,10 +33,14 @@ the Initial Developer. All Rights Reserved.
 	<script src="main_script.js"></script>
 	<script src="button_sys.js"></script>
 	<script src="dropdown_impl.js"></script>
+	<script src="static.js"></script>
 	<script>
 		console.log("newasm.html: script element called.")
 		current_page = PAGE_NEWASM_PAGE;
 	</script>
+
+	<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  	<script src="wiki_impl.js"></script>
 </head>
 <body>
 	<div id="fade-block"></div>
@@ -82,31 +86,33 @@ the Initial Developer. All Rights Reserved.
 	<!-- NewASM -->
 	<!-- ------------------- -->
 	<section id="NewASM">
-		<img class="apply_border_radius" width="100" src="visual_resources/newasm_logo.png" alt="New-ASM Logo"> <img class="apply_border_radius" width="300" src="visual_resources/brace_newasm.png" alt="BRACE Logo">
-		<ul>
-			<li>New-ASM is an interpreted language written in C++ that mimics assembly language, which somehow makes it a portable version of assembly.</li>
-		</ul>
-		<h1><u>Documentation</u></h1>
-		<h3>Getting Started</h3>
-		<iframe src="text_resources/newasm_code_example1.txt" width="1000" height="200"></iframe>
-		<hr>
+		<aside id="newasm-wiki-options">
+			<ul>
+			<headerbutton onclick="updateWiki(getting_started)">Getting Started</headerbutton>
+			<headerbutton onclick="updateWiki(getting_started)">Getting Started</headerbutton>
+			<headerbutton onclick="updateWiki(getting_started)">Getting Started</headerbutton>
+			<headerbutton onclick="updateWiki(getting_started)">Getting Started</headerbutton>
+			<headerbutton onclick="updateWiki(getting_started)">Getting Started</headerbutton>
+			<headerbutton onclick="updateWiki(getting_started)">Getting Started</headerbutton>
+			<headerbutton onclick="updateWiki(getting_started)">Getting Started</headerbutton>
+			<headerbutton onclick="updateWiki(getting_started)">Getting Started</headerbutton>
+			<headerbutton onclick="updateWiki(getting_started)">Getting Started</headerbutton>
+			<headerbutton onclick="updateWiki(getting_started)">Getting Started</headerbutton>
+			<headerbutton onclick="updateWiki(getting_started)">Getting Started</headerbutton>
+			</ul>
+		</aside>
+		<section id="wiki" class="newasmwikitext">
+		</section>
 		What are you waiting for?
 		<button class="normalbutton" onclick="brace_redirect(BRACE_LINK__NEWASM)">Download Now</button>
 	</section>
 	<!-- ------------------- -->
 	<!-- FOOTER -->
 	<!-- ------------------- -->
-	<footer>
-		<img class="apply_border_radius" src="brace_tinylogo.png">
-		<p><b>&copy; 2024 Brace&#8482; Co.</b> All rights reserved.</p>
-		<headerbutton onclick="brace_redirect(BRACE_LINK__PP)">PRIVACY POLICY</headerbutton>
-		<headerbutton onclick="brace_redirect(BRACE_LINK__GITHUB)"><code>GitHub</code></headerbutton>
-		<headerbutton onclick="brace_redirect(BRACE_LINK__DISCORD)">Discord</headerbutton>
-		<headerbutton onclick="brace_redirect(BRACE_LINK__IG)">Instagram</headerbutton>
-		<headerbutton onclick="brace_redirect(BRACE_LINK__YT)">YouTube</headerbutton>
-		<headerbutton onclick="brace_redirect(BRACE_LINK__TT)">TikTok</headerbutton>
+	<footer id="website-footer">
 	</footer>
 	<script src="popup_impl.js"></script>
 	<script src="aside_menu.js"></script>
 </body>
 </html>
+<script src="footer.js"></script>

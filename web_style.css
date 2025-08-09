@@ -237,7 +237,7 @@ section {
 	text-align: right;
 }
 
-#about, #services, #privacy_policy,#PawnScript, #NewASM,#DamnLarper, #__slideshow, #default_box {
+#about, #services, #privacy_policy,#PawnScript, #NewASM,#DamnLarper, #__slideshow, #default_box,.newasmwikitext {
 	background-color: #333;
 	margin-left: 250px;
 	margin-right: 250px;
@@ -825,4 +825,16 @@ headerbutton code:active{
     padding: 20px; /* Razmak unutar aside elementa */
     color: white; /* Boja teksta - možete promeniti u skladu sa potrebama */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Dodavanje senke radi efekta dubine */
+}
+
+/*****************/
+
+#newasm-wiki-options {
+    white-space: nowrap;              /* Sve dugmadi u jednom redu */
+    overflow-x: auto;                 /* Omogući horizontalni skrol */
+    overflow-y: hidden;              /* Spriječi vertikalni skrol */
+    display: flex;                   /* Poravnanje dugmadi */
+    gap: 8px;                        /* Razmak između dugmadi (opcionalno) */
+    padding: 10px;                   /* Unutrašnji razmak */
+    scroll-behavior: smooth;         /* Glatko skrolovanje */
 }
