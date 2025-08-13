@@ -20,20 +20,22 @@ the Initial Developer. All Rights Reserved.
 
 */
 
+let page_key = "_BRACE_reloaded_" + window.location.pathname;
 function handle_refresh()
 {
-	window.location.href = "index.html";
+	//window.location.href = "index.html";
+	return 0;
 }
 
 document.addEventListener("DOMContentLoaded", async function()
 {
-	if (sessionStorage.getItem("reloaded"))
+	if (sessionStorage.getItem(page_key))
 	{
-        sessionStorage.removeItem("reloaded"); 
+        sessionStorage.removeItem(page_key); 
         await handle_refresh();
     }
 	else
 	{
-        sessionStorage.setItem("reloaded", "true");
+        sessionStorage.setItem(page_key, "true");
     }
 });

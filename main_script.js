@@ -374,3 +374,39 @@ document.querySelectorAll('headerbutton').forEach(button => {
         }, 1000); // 1000 milisekundi = 1 sekunda
     });
 });
+
+
+/////////////
+
+document.addEventListener("DOMContentLoaded", function()
+{
+	document.body.innerHTML +=
+`<div id="popup" class="popup">
+    <span id="closePopup" class="close">&times;</span>
+    <p id="paragraph-for-popup">TEXT</p>
+</div>`;
+	
+});
+
+const popup = document.getElementById("popup");
+const closeBtn = document.getElementById("closePopup");
+
+function show_popup(msg, delay = 3000)
+{	
+	let para = document.getElementById("paragraph-for-popup");
+	
+	para.innerHTML = msg;
+	
+	popup.classList.add("show");
+
+    setTimeout(() => {
+        popup.classList.remove("show");
+    }, delay);
+	return 0;
+}
+
+// Zatvori klikom na X
+closeBtn.addEventListener("click", () => {
+    popup.classList.remove("show");
+});
+
