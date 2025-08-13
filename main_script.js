@@ -381,21 +381,21 @@ document.querySelectorAll('headerbutton').forEach(button => {
 document.addEventListener("DOMContentLoaded", function()
 {
 	document.body.innerHTML +=
-`<div id="popup" class="popup">
-    <span id="closePopup" class="close">&times;</span>
+`<div id="POPUP_BODY" class="popup">
+    <span id="closePopup-BUTTON_234" class="close">&times;</span>
     <p id="paragraph-for-popup">TEXT</p>
 </div>`;
 	
 });
 
-const popup = document.getElementById("popup");
-const closeBtn = document.getElementById("closePopup");
+const popup = document.getElementById("POPUP_BODY");
+const closeBtn = document.getElementById("closePopup-BUTTON_234");
 
-function show_popup(msg, delay = 3000)
+function show_popup(msg, delay = 4000)
 {	
 	let para = document.getElementById("paragraph-for-popup");
 	
-	para.innerHTML = msg;
+	para.textContent = msg;
 	
 	popup.classList.add("show");
 
