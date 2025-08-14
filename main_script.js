@@ -377,6 +377,9 @@ document.querySelectorAll('headerbutton').forEach(button => {
 
 
 /////////////
+/*
+let popup;
+let closeBtn;
 
 document.addEventListener("DOMContentLoaded", function()
 {
@@ -385,17 +388,26 @@ document.addEventListener("DOMContentLoaded", function()
     <span id="closePopup-BUTTON_234" class="close">&times;</span>
     <p id="paragraph-for-popup">TEXT</p>
 </div>`;
-	
-});
 
-const popup = document.getElementById("POPUP_BODY");
-const closeBtn = document.getElementById("closePopup-BUTTON_234");
+	closeBtn = document.getElementById("closePopup-BUTTON_234");
+	popup = document.getElementById("POPUP_BODY");
+	
+	
+	closeBtn.addEventListener("click", () => {
+		popup.classList.remove("show");
+	});
+});
 
 function show_popup(msg, delay = 4000)
 {	
+	if(!popup) return;
+
 	let para = document.getElementById("paragraph-for-popup");
 	
+	if(!para) return;
+	
 	para.textContent = msg;
+	para.style.fontSize = "13px";
 	
 	popup.classList.add("show");
 
@@ -404,9 +416,4 @@ function show_popup(msg, delay = 4000)
     }, delay);
 	return 0;
 }
-
-// Zatvori klikom na X
-closeBtn.addEventListener("click", () => {
-    popup.classList.remove("show");
-});
-
+*/
