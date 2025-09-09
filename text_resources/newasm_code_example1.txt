@@ -1,14 +1,14 @@
-.$using %ios
+using "ios"
 .data
-    txt string : "Hello world"
-    num len : $-string
+    string msg : "Hello world"
+    intg len : $ - string
 .start
-    mov tlr, string
+    mov tlr, msg
     mov stl, 0c1
     mov fdx, 1
     mov bos, len
 
-    sysenter %ios
+    sysenter "ios"
     
     syscall
 
