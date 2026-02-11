@@ -1,10 +1,9 @@
 using "ios"
 .data
-    string msg : "Hello world"
+    string msg : "Hello world\n"
     intg len : $ - string
 .start
     mov tlr, msg
-    mov stl, 0c1
     mov fdx, 1
     mov bos, len
 
