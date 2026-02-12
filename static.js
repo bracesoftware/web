@@ -22,7 +22,7 @@ the Initial Developer. All Rights Reserved.
 
 const HTML = {
     footer: `<img class="apply_border_radius" src="brace_tinylogo.png">
-        <p><b>&copy; 2025 Brace&#8482; Co.</b> All rights reserved.</p>
+        <p><b>&copy; 2026 Brace&#8482; Co.</b> All rights reserved.</p>
         <headerbutton onclick="brace_redirect(BRACE_LINK__PP)">PRIVACY POLICY</headerbutton>
         <headerbutton onclick="brace_redirect(BRACE_LINK__GITHUB)"><code>GitHub</code></headerbutton>
         <headerbutton onclick="brace_redirect(BRACE_LINK__DISCORD)">Discord</headerbutton>
