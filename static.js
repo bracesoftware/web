@@ -56,7 +56,7 @@ const HTML = {
 				<div class="dropdown_container">
 					<headerbutton id="headerbutton_more2" onclick="openDropdown('headerbutton_more2','mydropdown2')">MORE &#8595;</headerbutton>
 					<div class="dropdown" id="mydropdown2">
-						<headerbutton onclick="openModal('ContactInfo')">CONTACT</headerbutton>
+						<!--<headerbutton onclick="openModal('ContactInfo')">CONTACT</headerbutton>-->
 						<!--HEADER-<headerbutton onclick="handleAccountRequest()">LOGIN</headerbutton>--HEADER-->
 						<headerbutton id="headerbutton_refresh" onclick="brace_redirect(BRACE_LINK__HOMEPAGE)">&#8635; REFRESH</headerbutton>
 					</div>
