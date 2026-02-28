@@ -23,6 +23,7 @@ the Initial Developer. All Rights Reserved.
 document.addEventListener("DOMContentLoaded", function()
 {
     document.getElementById("website-footer").innerHTML = HTML.footer;
+    document.getElementById("contact-info-bajo").innerHTML = HTML.contact_info;
     document.getElementById("page_header").innerHTML = HTML.header;
 });
 

@@ -21,7 +21,18 @@ the Initial Developer. All Rights Reserved.
 */
 
 const HTML = {
-    footer: `<img class="apply_border_radius" src="brace_tinylogo.png">
+    contact_info: `
+    <div id="ContactInfo" class="modal">
+		<div class="modal-content">
+			<img class="apply_border_radius" src="brace_slogan.png">
+			<span class="close" onclick="closeModal()">&times;</span>
+			<h2>Contact Mail</h2>
+			<p>Contact us via mail at <code>bracetm.official@gmail.com</code>.</p>
+		</div>
+	</div>
+    `,
+    footer: `
+    <img class="apply_border_radius" src="brace_tinylogo.png">
         <p><b>&copy; 2026 Brace&#8482; Co.</b> All rights reserved.</p>
         <headerbutton onclick="brace_redirect(BRACE_LINK__PP)">PRIVACY POLICY</headerbutton>
         <headerbutton onclick="brace_redirect(BRACE_LINK__GITHUB)"><code>GitHub</code></headerbutton>
@@ -29,6 +40,7 @@ const HTML = {
         <headerbutton onclick="brace_redirect(BRACE_LINK__IG)">Instagram</headerbutton>
         <headerbutton onclick="brace_redirect(BRACE_LINK__YT)">YouTube</headerbutton>
         <headerbutton onclick="brace_redirect(BRACE_LINK__TT)">TikTok</headerbutton>
+        <headerbutton onclick="openModal('ContactInfo')">Contact</headerbutton>
     `,
     not_found: `
         <p>Not found 404</p>
