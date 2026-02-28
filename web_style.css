@@ -23,7 +23,7 @@ the Initial Developer. All Rights Reserved.
 @font-face
 {
 	font-family: brace_font;
-	src: url(css_resources/brace_web_font.ttf);
+	src: url(css_resources/brace_web_font_3.ttf);
 }
 
 :root{
@@ -82,7 +82,7 @@ input {
 }
 
 .slide img {
-	width: 100%;
+	width: 350px;
 	height: auto;
 	border-radius: 10px;
 }
@@ -175,7 +175,8 @@ header {
 
 header .logo img {
 	height: 50px;
-	margin-left: 50px;
+	margin-left: 100px;
+	margin-right: 10px;
 }
 
 nav ul {
@@ -203,7 +204,15 @@ section {
 	/*box-shadow: 0 0 20px rgba(255, 255, 255, 0.3); /* white glow */
 	background-color: white;
 }
-
+#whiteText {
+	color: rgb(163, 147, 147);
+	font-weight: bolder;
+}
+.container___{
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
 #home,#home_damnlarper{
 	margin-top: 100px;
 }
@@ -707,9 +716,17 @@ headerbutton:hover {
 headerbutton:hover:after {
 	width: 100%;
 }
+@keyframes dotted_thing {
+	from {
+		outline: 2px dotted var(--bright_green_color);
+	}
+	to {
+		outline: none;
+	}
+}
 headerbutton:active{
 	color: var(--green_color);
-	/*outline: 2px dotted var(--bright_green_color);*/
+	animation: dotted_thing 5s;
 }
 headerbutton code:active{
 	color: #fff;
@@ -767,22 +784,24 @@ headerbutton code:active{
 }
 
 .img_text_container-image {
-    margin-right: 39px; 
+    margin-right: 50px; 
 	margin-left: 50px;
 	margin-top: 40px;
-    width: 150px;
+    width: auto;
     height: auto;
 }
 
 .img_text_container-image-manual {
-    margin-right: 39px;
+    margin-right: 50px;
 	margin-top: 40px;
-	margin-left: 50px;
+	margin-left: 30px;
     height: auto;
 }
 
 .img_text_container-text {
     font-size: 16px;
+	margin-left: 40px;
+	margin-right: 40px;
 }
 /************************************/
 #aside-menu-whole {
@@ -890,6 +909,13 @@ body {
     width: auto;
     text-align: center;
 }
+.aero-box.about {
+	margin-left: 200px;
+	margin-right: 200px;
+	border-radius: 5px;
+}
+
+
 
 .subtext {
     color: var(--subtext_color);

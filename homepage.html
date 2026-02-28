@@ -49,35 +49,7 @@ the Initial Developer. All Rights Reserved.
 		<div id="loader"></div>
 	</div>
 	<header id="page_header">
-		<div class="logo">
-			<img class="apply_border_radius" src="brace_webpic.png" alt="BRACE Logo">
-		</div>
-		<nav>
-			<ul><!--HEADER-->
-				<div class="dropdown_container">
-					<headerbutton id="headerbutton_home" onclick="brace_redirect(BRACE_LINK__HOMEBUTTON)">HOME</headerbutton>
-					<headerbutton id="headerbutton_about" onclick="brace_redirect(BRACE_LINK__ABOUTUSBUTTON)">ABOUT</headerbutton>
-					<headerbutton id="headerbutton_services" onclick="brace_redirect(BRACE_LINK__SERVICESBUTTON)">SERVICES</headerbutton>
-				</div>
-				<div class="dropdown_container">
-					<headerbutton id="headerbutton_more" onclick="openDropdown('headerbutton_more','mydropdown')">PRODUCTS &#8595;</headerbutton>
-					<div class="dropdown" id="mydropdown">
-						<headerbutton onclick="brace_redirect(BRACE_LINK__PAWNSCRIPTBUTTON)">PawnScript</headerbutton>
-						<headerbutton onclick="brace_redirect(BRACE_LINK__DAMNLARPERBUTTON)">Damn Larper</headerbutton>
-						<headerbutton onclick="brace_redirect(BRACE_LINK__NEWASMBUTTON)">New-ASM</headerbutton>
-					</div>
-				</div>
-				<div class="dropdown_container">
-					<headerbutton id="headerbutton_more2" onclick="openDropdown('headerbutton_more2','mydropdown2')">MORE &#8595;</headerbutton>
-					<div class="dropdown" id="mydropdown2">
-						<headerbutton onclick="openModal('ContactInfo')">CONTACT</headerbutton>
-						<headerbutton onclick="handleAccountRequest()">LOGIN</headerbutton>
-						<headerbutton id="headerbutton_refresh" onclick="brace_redirect(BRACE_LINK__HOMEPAGE)">&#8635; REFRESH</headerbutton>
-					</div>
-				</div>
-
-			</ul><!--HEADER-->
-		</nav>
+		
 	</header>
 
 	<div id="ContactInfo" class="modal">
@@ -132,10 +104,9 @@ the Initial Developer. All Rights Reserved.
 	<!-- ------------------- -->
 	<!-- ABOUTUS -->
 	<!-- ------------------- -->
-	<section id="about">
-		<img id="headerbutton_about_" class="apply_border_radius" width="300" src="visual_resources/brace_aboutus.png" alt="BRACE Logo">
-		
-
+	 <div class="aero-box about">
+		<h1>Welcome to Brace Software</h1>
+		<p style="color: var(--subtext_color);">What is this?</p>
 		<div class="img_text_container">
 			<div class="slideshow-container img_text_container-image-manual">
 				<div class="slide">
@@ -154,17 +125,18 @@ the Initial Developer. All Rights Reserved.
 				<other-button class="prev" onclick="changeSlide(-1)">&larr;</other-button>
 				<other-button class="next" onclick="changeSlide(1)">&rarr;</other-button>
 			</div>
-			<ul class="img_text_container-text">
-				<li>Brace&#8482; Co. is a small IT company dedicated to making information technology fun and interesting to newbies and future generations.</li>
-				<li>Interested in contribution, development or whatsoever? Click those buttons down there!</li>
-				<li>All of the official products of the Brace™ team are licensed with Mozilla Public License. We're fully open source!</li>
-			</ul>
+			<p class="img_text_container-text">
+				Brace&#8482; Co. is a small IT company dedicated to making information technology fun and interesting to newbies and future generations.
+				Interested in contribution, development or whatsoever? Click those buttons down there!
+				All of the official products of the Brace™ team are licensed with Mozilla Public License. We're fully open source!
+			</p>
 		</div>
-	</section>
+	</div>
+
 	<!-- ------------------- -->
 	<!-- SERVICES -->
 	<!-- ------------------- -->
-	<section id="services">
+	<!--<section id="services">
 		<img id="headerbutton_services_" class="apply_border_radius"  width="300" src="visual_resources/brace_services.png">
 		<ul>
 			<li>Software Development</li>
@@ -172,7 +144,7 @@ the Initial Developer. All Rights Reserved.
 			<li>Cloud Solutions</li>
 			<li>System Maintenance</li>
 		</ul>
-	</section>
+	</section>-->
 	<!-- ------------------- -->
 	<!-- Aside meni -->
 	<!-- ------------------- -->

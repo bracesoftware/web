@@ -32,5 +32,37 @@ const HTML = {
     `,
     not_found: `
         <p>Not found 404</p>
+    `,
+    header: `
+        <div class="container___"><div class="logo">
+			<img class="apply_border_radius" src="brace_logo.png" alt="BRACE Logo">
+		</div>
+		<h3 id="whiteText">Brace Software Co.</h3></div>
+		<nav>
+			<ul><!--HEADER-->
+				<div class="dropdown_container">
+					<headerbutton id="headerbutton_refresh" onclick="brace_redirect(BRACE_LINK__HOMEPAGE)">HOME</headerbutton>
+					<headerbutton id="headerbutton_about" onclick="brace_redirect(BRACE_LINK__HOMEPAGE)">ABOUT</headerbutton>
+					<headerbutton id="headerbutton_services" onclick="brace_redirect(BRACE_LINK__SERVICESBUTTON)">SERVICES</headerbutton>
+				</div>
+				<div class="dropdown_container">
+					<headerbutton id="headerbutton_more" onclick="openDropdown('headerbutton_more','mydropdown')">PRODUCTS &#8595;</headerbutton>
+					<div class="dropdown" id="mydropdown">
+						<headerbutton onclick="brace_redirect(BRACE_LINK__PAWNSCRIPTBUTTON)">PawnScript</headerbutton>
+						<headerbutton onclick="brace_redirect(BRACE_LINK__DAMNLARPERBUTTON)">Damn Larper</headerbutton>
+						<headerbutton onclick="brace_redirect(BRACE_LINK__NEWASMBUTTON)">New-ASM</headerbutton>
+					</div>
+				</div>
+				<div class="dropdown_container">
+					<headerbutton id="headerbutton_more2" onclick="openDropdown('headerbutton_more2','mydropdown2')">MORE &#8595;</headerbutton>
+					<div class="dropdown" id="mydropdown2">
+						<headerbutton onclick="openModal('ContactInfo')">CONTACT</headerbutton>
+						<!--HEADER-<headerbutton onclick="handleAccountRequest()">LOGIN</headerbutton>--HEADER-->
+						<headerbutton id="headerbutton_refresh" onclick="brace_redirect(BRACE_LINK__HOMEPAGE)">&#8635; REFRESH</headerbutton>
+					</div>
+				</div>
+
+			</ul><!--HEADER-->
+		</nav>
     `
 };
