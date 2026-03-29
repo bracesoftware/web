@@ -1,0 +1,8 @@
+#define __NEWASM_BCXX_INTERNET_WORKS 0
+namespace newasm
+{
+	namespace BetterCPlusPlus
+	{
+		inline void init(void) noexcept { return; }
+	}
+}
