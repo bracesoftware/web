@@ -1,2 +1,2 @@
-certutil -hashfile better_audio.zip SHA1
+certutil -hashfile elecraft.zip SHA1
 pause
